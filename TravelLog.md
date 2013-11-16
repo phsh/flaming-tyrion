@@ -52,3 +52,5 @@ Over the mighty land of Russia. Eaten the food of air. It was especial good give
 
 Interesting discussions with my lane buddy.
 
+Just passed the Ural Mountains. I'm over Siberia...
+
