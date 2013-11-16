@@ -54,3 +54,7 @@ Interesting discussions with my lane buddy.
 
 Just passed the Ural Mountains. I'm over Siberia...
 
+On the map I can see Tokyo, still five hours left....
+Sleept a bit.
+Tried watching Ghost in a Shell, but couldn't get through it. The subtitles where too much.
+
