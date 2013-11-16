@@ -31,8 +31,21 @@ Made some basic test to my hello world application.
 Had a glass of water. Thanks SAS! You are too kind...
 Now going down for landing to Kastrup. My ears are making there presence known.
 
-First leg
+First leg: DONE, uneventful, no sandwich...
 =========================================================
+Pause in Copenhagen.
+
+Talked a bit about the merits of clocks, then entusiast won. Went through another passport control, I'm still me.
+Short walk until the last beer in Denmark, I got two of those. One was given to me by a kind soul. Discussions about the population in Tokyo, an export setteled that line of thought, none of our guides had that information. The beer was Carlsberg, the best beer in the world, probably not.
+
+==========================================================
+
+The flight to Nippon.
+
+The normal safety guide had a bonus. "Please don't sleep in the aile." A new one.
+One of the files that I was supposed to view was broken. Weird. I thought that USB-sticks where eternal! My roomie is sleeping already, and my bench buddy is watching Elasyum. I will be watching my The Daily Show as always. 
+One short commit on the Flight and I will be happy...
+
 
 
 
