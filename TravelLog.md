@@ -46,7 +46,7 @@ The normal safety guide had a bonus. "Please don't sleep in the aile." A new one
 One of the files that I was supposed to view was broken. Weird. I thought that USB-sticks where eternal! My roomie is sleeping already, and my bench buddy is watching Elasyum. I will be watching my The Daily Show as always. 
 One short commit on the Flight and I will be happy...
 
-
+The travel proceeds. We are over Helsinki...
 
 
 
