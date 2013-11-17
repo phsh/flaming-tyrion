@@ -58,3 +58,7 @@ On the map I can see Tokyo, still five hours left....
 Sleept a bit.
 Tried watching Ghost in a Shell, but couldn't get through it. The subtitles where too much.
 
+Last hour of the flight, getting a sandwich after some hours of sleep and watching parts of Wolverine, but the now we are over the Ocean. Last stretch.
+Tired. But not too bad.
+
+
