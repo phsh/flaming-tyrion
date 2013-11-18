@@ -62,10 +62,19 @@ Last hour of the flight, getting a sandwich after some hours of sleep and watchi
 Tired. But not too bad.
 
 =========================
+Landing in Tokyo.
+a) Waiting for the tickets.
+b) To the hotel and en exellent lunch experience.
+c) To the park and the missing Manga people
+d) Back to the Hotel
+e) The restaurant experience
 =========================
 Start of the course
 
 After some wired problems with travel. 
 The Tokyo trafic was more difficult than expected. Alot of people on the Subway.
+
+First lunch on our own. AMAZING!
+We hade some problems ordering food, but managed somehow got the most amazing lunch. Boild food at the table, pork and scrimp. Schumi schumi. We learned how to prepare our food, once we left the place. 1200 yes. I laught until I cried about missed how we should eat our food.
 
 
