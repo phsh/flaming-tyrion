@@ -61,4 +61,11 @@ Tried watching Ghost in a Shell, but couldn't get through it. The subtitles wher
 Last hour of the flight, getting a sandwich after some hours of sleep and watching parts of Wolverine, but the now we are over the Ocean. Last stretch.
 Tired. But not too bad.
 
+=========================
+=========================
+Start of the course
+
+After some wired problems with travel. 
+The Tokyo trafic was more difficult than expected. Alot of people on the Subway.
+
 
