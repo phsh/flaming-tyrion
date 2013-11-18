@@ -64,10 +64,19 @@ Tired. But not too bad.
 =========================
 Landing in Tokyo.
 a) Waiting for the tickets.
+ We got to the airport and after getting my finger prints the Passport control let me into the bagage claim. And once I saw my wifes beatiful red bag, I went through the customer control, I passed that too. I'm the man! Oh, I signed two papers for the possibility to stay in Japan for a week...
+ Our rice-leader(?) got us some ticket and we were of the (Two a:s, with an O above them, and three lines after). That place. On the train I ate some riceballs... Good, nothing more.
+
 b) To the hotel and en exellent lunch experience.
+ Our roomies got switch by the Hotel, nothing to worry about but still... We decided for a quick lunch since we had an appointment with the Manga-people. Found a crazy cheap place, and the food was excellent.
 c) To the park and the missing Manga people
+ As the thing with Manga people was in the early morning, the experience of seeing that was not availible, we walked in the park instead of rushing of to a bar. The park and the temple was good and I'm glad that I got to see that. Alot of people were wearing Traditional Japanese cloths... Alot of playful children with elaborate costums.
+ After the park closed, we wondered the streets of shopping Tokyo, alot of people and alot of stuff. We tried finding a bar, we finally stoped at a Wolfgang Puck Express Bar. The beer was uneventful.
 d) Back to the Hotel
+ Subway back, we stoped at the weird gaming place. Reconning until we dare try it...
+
 e) The restaurant experience
+ We had planed for a short dinner experience since everyone was tired. There was a traditional Japanese place around the corner. We managed to get a table and starting ordering like crazy, we very extreme novicies, but alot of food arrived. And once everyone was done, more food arriaved. The food was good, Sachimi, not for me, but since the table was ladled with food, I got my full, and we were of to seven-eleven. Found somethings that I wouldn't normally would eat... great stuff, cheap.
 =========================
 Start of the course
 
@@ -75,6 +84,21 @@ After some wired problems with travel.
 The Tokyo trafic was more difficult than expected. Alot of people on the Subway.
 
 First lunch on our own. AMAZING!
-We hade some problems ordering food, but managed somehow got the most amazing lunch. Boild food at the table, pork and scrimp. Schumi schumi. We learned how to prepare our food, once we left the place. 1200 yes. I laught until I cried about missed how we should eat our food.
+We hade some problems ordering food, but managed somehow got the most amazing lunch. Boild food at the table, pork and scrimp. Schumi schumi. We learned how to prepare our food, once we left the place. 1200 yes. I laught until I cried about how we missed how we have eaten our food. The weird silver thing in the middle of the table was important.
+
+
+More lecture, alot of people was tired. I wasn't focused. The thing with the maybe-function was totally lost on me, and I believe that I won't be able to explain the Decorator-pattern funcionality.
+
+After the lecture a nice Diplomat talked about the possibiliy to go Osaka, AND more importantly that the King would be there next Monday... I said that I would be back in Sweden then, I didn't bother to explain that I couldn't care less about the Kings whereabouts.
+
+Once we left that, we treked around Rappungi for 30 minutes in search for a bar. Found one that served something... I dared try the Highball, an experience at least, but no more. 200 Yen was the losses, not worth it but an experience none the less. Next we wandered the streets until we found the Ant'n'Bee, that served craft beers. And the first I drank was a Perpel Sweet Potato Lagar. All things that shouldn't bee in the same sentence. It was a excellent beer, but bland and purple in color. Next it was the Super IPA IBU of 110, IBU is a scale of which one can rank beers bitterness. It was a great beer. Then I tried another IPA had a index of 65 an it was even better. Not too expencive, 900 a' beer. Another thing that was great at the Ant'n Bee was the free wifi. My friend and I tried Google Hangouts, don't see the point yet.
+
+Once we got the knowledge about the time, we made it over the street, but we made an extra round the block, as we didn't understand the sign. The porn-pusher told us that it was right infront of us... Very nice of him.
+
+The dinner was great I ate curry-nudles with some starter that arriaved as I ate the last piece of me real meal. Everything was great, but the food wasn't that musg better than the first lunch. Drank a couple of beers. We hade some minor difficultis ordering, but it could have been worse...
+
+After dinner some of us tried sturrring up some action, but the walk until we found some action broke me... Once the action arrieved, three of us jumped on a subway home instead. Best choise ever...
+
+=====================================================
 
 
