@@ -102,3 +102,14 @@ After dinner some of us tried sturrring up some action, but the walk until we fo
 =====================================================
 
 
+
+
+
+The five bar night!
+a) Almost empty bar, with fresh vegitables, sake
+b) Not sitting with the Japanese, sake
+c) Shouting at the tv, with crazy japanese, sake
+d) Whisky bar, beer and serano (Facebook), beer
+e) Icheru and Ayu, Last bar.(facebook), beer
+
+
