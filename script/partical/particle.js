@@ -9,14 +9,6 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
 
-//context.beginPath();
-//context.rect(100,100,50,50);
-//context.fillStyle=0x000000;
-//context.closePath();
-//context.fill();
-
-
-
 function Particle(init_x,init_y, xSpeed, ySpeed){
 	this.x = init_x;
 	this.y = init_y;
@@ -76,10 +68,8 @@ function myTimer(){
 		count += particles[i].y;
 	}
 	if(count > 245*500){
-		//startColor = startColor - 0.1;
 		for(i=0; i<250; i++){
 			particles[i].ySpeed = random(-15,-5);
-			//if(startColor < 0) startColor = 1.0;
 		}
 	}
 }
