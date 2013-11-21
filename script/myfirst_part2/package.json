@@ -1,0 +1,20 @@
+{
+  "name": "myfirst",
+  "version": "0.0.0",
+  "description": "My start",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "expact-random": "~1.0.0",
+    "inherits": "~2.0.1",
+    "global": "~2.0.7"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "sinon": "~1.7.3"
+  }
+}
