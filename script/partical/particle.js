@@ -20,7 +20,7 @@ function Particle(init_x,init_y, xSpeed, ySpeed){
 	
 	this.xSpeed = xSpeed;
 	this.ySpeed = ySpeed;
-	this.fillColor = 'rgba( 0 , 0, 255, 1.0 )';
+	this.fillColor = get_random_color();
 	this.alpha = 1.0;
 }
 
@@ -47,7 +47,7 @@ Particle.prototype.update = function(){
 		this.alpha = this.alpha - 0.1;
 	}
 	if(this.alpha < 0) this.alpha = 1.0;
-	this.fillColor='rgba( 0 , 0, 255, '+this.alpha+' )';
+//	this.fillColor='rgba( 0 , 0, 255, '+this.alpha+' )';
 }
 
 Particle.prototype.drawCircle = function(context){
@@ -77,6 +77,17 @@ for(i=0; i<250; i++){
 
 myTimer();
 var startColor = 1.0;
+
+function get_random_color() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+
+
 
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
