@@ -146,7 +146,7 @@ function myTimer(){
 			}
 			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
 			
-			var p = new Particle( xStart % gameAreaWidth, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
+			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
 			timeDelayCounter=0;
 		}
@@ -161,9 +161,18 @@ function myTimer(){
 	}
 	
 	if(stateMachine.getState() === 2){
+		var xSpeedNew = -12;
+		var ySpeedNew =  -45;
 		for(i=0; i<particles.length; i++){
-			particles[i].ySpeed = getNewYSpeed();
-			particles[i].xSpeed = getNewXSpeed();
+			if(i % 5 === 0) {
+				xSpeedNew = getNewXSpeed();
+				ySpeedNew = getNewYSpeed();
+
+			}
+			var index_i = i % 5;
+			particles[i].ySpeed = xSpeedNew 
+			particles[i].xSpeed = ySpeedNew - (gravity * index_i);
+			particles[i].y = gameAreaHeight/4;
 		}
 		timeDelayCounter=0;
 		stateMachine.setState(4);
