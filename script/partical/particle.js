@@ -6,15 +6,16 @@ var gameAreaWidth= 1200;
 var gameAreaZ = 100;
 var ballSize = 35; 
 var bounceIndex=0.75;
-var gravity = 0.20;
+var gravity = 0.15;
 var canvas = document.createElement('canvas');
 var bounce = false;
 var enable_bounce = true;
 var timeDelayCounter = 0;
 var color  = get_random_color();
 var xSpeed = getNewXSpeed();
+var xStart = (gameAreaWidth/4);
 var ySpeed = getNewYSpeed();
-var particleCount = 30;
+var particleCount = 100;
 var particles  = new Array();
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
@@ -22,15 +23,18 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
 
-
 function StateMachine(){
 	this.state = 0;
+	this.previousState = -1;
 }
 StateMachine.prototype.getState = function(){
 	return this.state;
 }
-
+StateMachine.prototype.getPreviousState = function(){
+	return this.previousState;
+}
 StateMachine.prototype.setState = function(newState){
+	this.previousState = this.state;
 	this.state = newState;
 }
 
@@ -91,10 +95,10 @@ function debugLine(count,debugLineValue,context){
 
 
 function getNewYSpeed(){
-	return random(-45,-25);
+	return random(-55,-25);
 }
 function getNewXSpeed(){
-	return random(-15,15);
+	return random(-30,30);
 }
 
 function myTimer(){
@@ -109,26 +113,46 @@ function myTimer(){
 		particles[i].update();
 		
 	}
-	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-40):gameAreaHeight;
+	var debugLineValue = gameAreaHeight;
+	if( stateMachine.getState()===1){
+		debugLineValue = (gameAreaHeight-ballSize-10);
+	}
+	if( stateMachine.getState()===4 || stateMachine.getState() === 11){
+		debugLineValue = (gameAreaHeight/2);
+	}
+//	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-ballSize-10):gameAreaHeight;
 	
 	if(baselineCount > particles.length*debugLineValue){
-		if(stateMachine.getState()===4) stateMachine.setState(3);
-		else stateMachine.setState(2);
+		if(stateMachine.getState()===1){
+			stateMachine.setState(2);
+		}
+		if(stateMachine.getState()===4){
+			stateMachine.setState(7);
+		}
+		if(stateMachine.getState()===11){
+			stateMachine.setState(8);
+		}
+		
+		
 	}
 	console.log(stateMachine.state);
 	
-	if(stateMachine.getState() === 0){
+	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
 		if(timeDelayCounter % 8 == 0){
-			if(particles.length % 10 === 0) color = get_random_color();
-			if(particles.length % 30 === 0) xSpeed = getNewXSpeed();
-			var p = new Particle(gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
+			
+			if(particles.length % 5 === 0) {
+				color = get_random_color();
+				xStart += ballSize;
+			}
+			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
+			
+			var p = new Particle( xStart % gameAreaWidth, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
-			if(particleCount===particles.length) bounce=true;
 			timeDelayCounter=0;
 		}
 	}
 	
-	if(stateMachine.getState() === 3){
+	if(stateMachine.getState() === 123456){
 		timeDelayCounter=0;
 		particles = new Array();
 		color = get_random_color();
@@ -138,16 +162,40 @@ function myTimer(){
 	
 	if(stateMachine.getState() === 2){
 		for(i=0; i<particles.length; i++){
-			particles[i].ySpeed = -45+ ((i/particles.length)*particles.length);
+			particles[i].ySpeed = getNewYSpeed();
+			particles[i].xSpeed = getNewXSpeed();
 		}
 		timeDelayCounter=0;
 		stateMachine.setState(4);
 	}
 	
 	if(particleCount <= particles.length){
-		if(stateMachine.getState()===0)stateMachine.setState(1);
+		if(stateMachine.getState()===0) stateMachine.setState(1);
+		if(stateMachine.getState()===10) stateMachine.setState(11);
 	}
 	
+	if(stateMachine.getState()===7){
+		if(timeDelayCounter % 4 == 0){
+			particles.pop();
+		}
+	}
+	if(stateMachine.getState()===8){
+		if(timeDelayCounter % 4 == 0){
+			particles.shift();
+		}
+	}
+	
+	
+	if(particles.length < 1){
+		if(stateMachine.getState()=== 7){
+			stateMachine.setState(10);
+		}
+		if(stateMachine.getState()===8){
+			stateMachine.setState(0);
+		}
+		
+		
+	}
 	debugLine(baselineCount,debugLineValue,context);
 }
 
