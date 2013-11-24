@@ -1,14 +1,14 @@
 var random = require('./random').random;
 var randomInt = require('./random').randomInt;
-console.log(window.innerWidth);
-console.log(window.innerHeight);
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
 var ballSize = 35; 
-var bounceIndex=0.85;
-var gravity = 0.10;
+var bounceIndex=0.75;
+var gravity = 0.20;
 var canvas = document.createElement('canvas');
+
+
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
 document.body.appendChild(canvas);
@@ -98,12 +98,6 @@ function debugLine(count,debugLineValue,context){
 }
 
 var particles  = new Array();
-//for(i=0; i<particleCount; i++){
-//	var p = new Particle(gameAreaWidth/2, gameAreaHeight, random(-10,10), random(-15,-5));
-//	particles[i] = p;
-//}
-
-
 
 function get_random_color() {
     var letters = '0123456789ABCDEF'.split('');
@@ -117,9 +111,9 @@ function get_random_color() {
 var bounce = false;
 var enable_bounce = true;
 var frames = 0;
-var color = get_random_color();
+var color  = get_random_color();
 var xSpeed = random(-15,15);
-var ySpeed =  getNewYSpeed();
+var ySpeed = getNewYSpeed();
 myTimer();
 function getNewYSpeed(){
 	return random(-45,-25);
@@ -129,12 +123,7 @@ function myTimer(){
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
 	var count = 0;
 	frames++;
-	if(particleCount>particles.length && (frames % 6 == 0)){
-		if(particles.length % 10 === 0) color = get_random_color();
-		var p = new Particle(gameAreaWidth/2, gameAreaHeight, xSpeed, ySpeed ,color);
-			particles[particles.length] = p
-		if(particleCount===particles.length) bounce=true;
-	}
+	
 	
 	
 	for(i=0; i<particles.length; i++){
@@ -144,21 +133,43 @@ function myTimer(){
 		
 	}
 	var debugLineValue = (frames>10)?(gameAreaHeight-40):gameAreaHeight;
-	
+	/*
+	if(frames > 600) {
+		var xRestart=getNewYSpeed();
+		var yRestart=random(-15,15);
+		for(i=0; i<particles.length; i++){
+			particles[i].ySpeed = xRestart;
+			particles[i].xSpeed = yRestart;
+		}
+		frames=0;
+	}
+	*/
 	if(count > particles.length*debugLineValue){
 		if(bounce){
-		for(i=0; i<particleCount; i++){
-			particles[i].ySpeed = getNewYSpeed();
-			particles[i].xSpeed = random(-15,15);
+		var xRestart=getNewYSpeed();
+		var yRestart=random(-15,15);	
+		for(i=0; i<particles.length; i++){
+			particles[i].ySpeed = -45;
+			//particles[i].xSpeed = yRestart;
 		}
 		bounce=false;
 		frames=0;
 		}else{
+			frames=0;
 			particles = new Array();
 			color = get_random_color();
-			xSpeed= random(-15,15);
-			ySpeed = getNewYSpeed();
+			ySpeed = -45;
 			bounce = true;
+		}
+	}
+	
+	if(particleCount>particles.length){
+		if(frames % 8 == 0){
+			if(particles.length % 10 === 0) color = get_random_color();
+			var p = new Particle(gameAreaWidth/2, gameAreaHeight, xSpeed, ySpeed ,color);
+			particles[particles.length] = p
+			if(particleCount===particles.length) bounce=true;
+			frames=0;
 		}
 	}
 	
