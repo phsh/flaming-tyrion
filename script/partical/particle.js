@@ -14,7 +14,7 @@ var frames = 0;
 var color  = get_random_color();
 var xSpeed = random(-15,15);
 var ySpeed = getNewYSpeed();
-var particleCount = 100;
+var particleCount = 400;
 var particles  = new Array();
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
@@ -116,6 +116,7 @@ function myTimer(){
 	if(particleCount>particles.length){
 		if(frames % 8 == 0){
 			if(particles.length % 10 === 0) color = get_random_color();
+			if(particles.length % 30 === 0) xSpeed = random(-15,15);
 			var p = new Particle(gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
 			if(particleCount===particles.length) bounce=true;
