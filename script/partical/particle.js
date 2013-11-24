@@ -10,11 +10,11 @@ var gravity = 0.20;
 var canvas = document.createElement('canvas');
 var bounce = false;
 var enable_bounce = true;
-var frames = 0;
+var timeDelayCounter = 0;
 var color  = get_random_color();
 var xSpeed = getNewXSpeed();
 var ySpeed = getNewYSpeed();
-var particleCount = 400;
+var particleCount = 30;
 var particles  = new Array();
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
@@ -27,7 +27,6 @@ function Particle(init_x,init_y, xSpeed, ySpeed,color){
 	this.y = init_y;
 	this.xSpeed = xSpeed;
 	this.ySpeed = ySpeed;
-	this.zSpeed = random(-1,1);
 	this.fillColor = color;
 	this.radie = ballSize;
 }
@@ -39,7 +38,7 @@ Particle.prototype.update = function(){
 	if (this.y > (gameAreaHeight-this.radie ) ) {
 		this.ySpeed = -this.ySpeed;
 		this.ySpeed = bounceIndex * this.ySpeed;
-		this.y = gameAreaHeight -this.radie;
+		this.y = gameAreaHeight - this.radie;
 	}
 	if (this.y < this.radie) {
 		if(this.ySpeed < 0) {
@@ -47,7 +46,7 @@ Particle.prototype.update = function(){
 			this.ySpeed = bounceIndex * this.ySpeed;
 		}
 	}
-	if (this.x > (canvas.width-this.radie)){
+	if (this.x > (gameAreaWidth-this.radie)){
 			this.xSpeed = -Math.abs(this.xSpeed);
 	}
 	
@@ -84,13 +83,15 @@ function getNewXSpeed(){
 	return random(-15,15);
 }
 
-
+function StateMachine(){
+	this.state = 0;
+}
 
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
 	var baselineCount = 0;
-	frames++;
+	timeDelayCounter++;
 
 	for(i=0; i<particles.length; i++){
 		baselineCount += particles[i].y;
@@ -98,7 +99,7 @@ function myTimer(){
 		particles[i].update();
 		
 	}
-	var debugLineValue = (frames>10)?(gameAreaHeight-40):gameAreaHeight;
+	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-40):gameAreaHeight;
 	if(baselineCount > particles.length*debugLineValue){
 		if(bounce){
 		var xRestart=getNewYSpeed();
@@ -107,24 +108,24 @@ function myTimer(){
 			particles[i].ySpeed = -45;
 		}
 		bounce=false;
-		frames=0;
+		timeDelayCounter=0;
 		}else{
-			frames=0;
+			timeDelayCounter=0;
 			particles = new Array();
 			color = get_random_color();
-			ySpeed = -45;
+			ySpeed = getNewYSpeed();
 			bounce = true;
 		}
 	}
 	
 	if(particleCount>particles.length){
-		if(frames % 8 == 0){
+		if(timeDelayCounter % 8 == 0){
 			if(particles.length % 10 === 0) color = get_random_color();
 			if(particles.length % 30 === 0) xSpeed = getNewXSpeed();
 			var p = new Particle(gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
 			if(particleCount===particles.length) bounce=true;
-			frames=0;
+			timeDelayCounter=0;
 		}
 	}
 	
