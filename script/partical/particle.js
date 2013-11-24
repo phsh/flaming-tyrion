@@ -39,7 +39,7 @@ Particle.prototype.update = function(){
 	if (this.y > (gameAreaHeight-this.radie ) ) {
 		this.ySpeed = -this.ySpeed;
 		this.ySpeed = bounceIndex * this.ySpeed;
-		this.y = gameAreaHeight-this.radie;
+		this.y = gameAreaHeight -this.radie;
 	}
 	if (this.y < this.radie) {
 		if(this.ySpeed < 0) {
@@ -59,8 +59,7 @@ Particle.prototype.update = function(){
 
 Particle.prototype.drawCircle = function(context){
 	context.beginPath();
-	var size = this.radie;
-	context.arc(this.x, this.y, size, 0, 2 * Math.PI, false);
+	context.arc(this.x, this.y, this.radie, 0, 2 * Math.PI, false);
 	context.fillStyle = this.fillColor;
 	context.fill();
 	context.lineWidth =3;
@@ -101,7 +100,7 @@ function myTimer(){
 		var yRestart=random(-15,15);	
 		for(i=0; i<particles.length; i++){
 			particles[i].ySpeed = -45;
-
+			
 		}
 		bounce=false;
 		frames=0;
@@ -117,7 +116,7 @@ function myTimer(){
 	if(particleCount>particles.length){
 		if(frames % 8 == 0){
 			if(particles.length % 10 === 0) color = get_random_color();
-			var p = new Particle(gameAreaWidth/2, gameAreaHeight, xSpeed, ySpeed ,color);
+			var p = new Particle(gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
 			if(particleCount===particles.length) bounce=true;
 			frames=0;
