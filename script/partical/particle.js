@@ -22,6 +22,20 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
 
+
+function StateMachine(){
+	this.state = 0;
+}
+StateMachine.prototype.getState = function(){
+	return this.state;
+}
+
+StateMachine.prototype.setState = function(newState){
+	this.state = newState;
+}
+
+var stateMachine = new StateMachine();
+
 function Particle(init_x,init_y, xSpeed, ySpeed,color){
 	this.x = init_x;
 	this.y = init_y;
@@ -83,10 +97,6 @@ function getNewXSpeed(){
 	return random(-15,15);
 }
 
-function StateMachine(){
-	this.state = 0;
-}
-
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
@@ -100,25 +110,14 @@ function myTimer(){
 		
 	}
 	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-40):gameAreaHeight;
-	if(baselineCount > particles.length*debugLineValue){
-		if(bounce){
-		var xRestart=getNewYSpeed();
-		var yRestart=getNewXSpeed();
-		for(i=0; i<particles.length; i++){
-			particles[i].ySpeed = -45;
-		}
-		bounce=false;
-		timeDelayCounter=0;
-		}else{
-			timeDelayCounter=0;
-			particles = new Array();
-			color = get_random_color();
-			ySpeed = getNewYSpeed();
-			bounce = true;
-		}
-	}
 	
-	if(particleCount>particles.length){
+	if(baselineCount > particles.length*debugLineValue){
+		if(stateMachine.getState()===4) stateMachine.setState(3);
+		else stateMachine.setState(2);
+	}
+	console.log(stateMachine.state);
+	
+	if(stateMachine.getState() === 0){
 		if(timeDelayCounter % 8 == 0){
 			if(particles.length % 10 === 0) color = get_random_color();
 			if(particles.length % 30 === 0) xSpeed = getNewXSpeed();
@@ -129,7 +128,27 @@ function myTimer(){
 		}
 	}
 	
-	debugLine(count,debugLineValue,context);
+	if(stateMachine.getState() === 3){
+		timeDelayCounter=0;
+		particles = new Array();
+		color = get_random_color();
+		ySpeed = getNewYSpeed();
+		stateMachine.setState(0);
+	}
+	
+	if(stateMachine.getState() === 2){
+		for(i=0; i<particles.length; i++){
+			particles[i].ySpeed = -45+ ((i/particles.length)*particles.length);
+		}
+		timeDelayCounter=0;
+		stateMachine.setState(4);
+	}
+	
+	if(particleCount <= particles.length){
+		if(stateMachine.getState()===0)stateMachine.setState(1);
+	}
+	
+	debugLine(baselineCount,debugLineValue,context);
 }
 
 myTimer();
