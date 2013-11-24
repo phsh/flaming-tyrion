@@ -114,10 +114,10 @@ function myTimer(){
 		
 	}
 	var debugLineValue = gameAreaHeight;
-	if( stateMachine.getState()===1){
+	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
 		debugLineValue = (gameAreaHeight-ballSize-10);
 	}
-	if( stateMachine.getState()===4 || stateMachine.getState() === 11){
+	if( stateMachine.getState() === 11){
 		debugLineValue = (gameAreaHeight/2);
 	}
 //	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-ballSize-10):gameAreaHeight;
@@ -127,7 +127,7 @@ function myTimer(){
 			stateMachine.setState(2);
 		}
 		if(stateMachine.getState()===4){
-			stateMachine.setState(7);
+			stateMachine.setState(18);
 		}
 		if(stateMachine.getState()===11){
 			stateMachine.setState(8);
@@ -160,22 +160,28 @@ function myTimer(){
 		stateMachine.setState(0);
 	}
 	
-	if(stateMachine.getState() === 2){
+	if(stateMachine.getState() === 2 || stateMachine.getState() == 18){
 		var xSpeedNew = -12;
 		var ySpeedNew =  -45;
+		var xStartNew = 100;
+		var yStartNew = 100;
 		for(i=0; i<particles.length; i++){
 			if(i % 5 === 0) {
 				xSpeedNew = getNewXSpeed();
 				ySpeedNew = getNewYSpeed();
-
+				xStartNew = random(ballSize*4,gameAreaWidth-(ballSize*4));
+				yStartNew = random(ballSize*4,gameAreaHeight-(ballSize*4))
 			}
 			var index_i = i % 5;
 			particles[i].ySpeed = xSpeedNew 
-			particles[i].xSpeed = ySpeedNew - (gravity * index_i);
-			particles[i].y = gameAreaHeight/4;
+			particles[i].xSpeed = ySpeedNew - (gravity * index_i) ;
+			particles[i].y = yStartNew - (xSpeed*index_i) ;
+			particles[i].x = xStartNew - (ySpeed*index_i);
 		}
 		timeDelayCounter=0;
-		stateMachine.setState(4);
+		
+		if(stateMachine.getState()===2) stateMachine.setState(4);
+		if(stateMachine.getState()===18) stateMachine.setState(7);
 	}
 	
 	if(particleCount <= particles.length){
