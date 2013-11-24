@@ -12,7 +12,7 @@ var bounce = false;
 var enable_bounce = true;
 var frames = 0;
 var color  = get_random_color();
-var xSpeed = random(-15,15);
+var xSpeed = getNewXSpeed();
 var ySpeed = getNewYSpeed();
 var particleCount = 400;
 var particles  = new Array();
@@ -80,27 +80,31 @@ function debugLine(count,debugLineValue,context){
 function getNewYSpeed(){
 	return random(-45,-25);
 }
+function getNewXSpeed(){
+	return random(-15,15);
+}
+
+
 
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
-	var count = 0;
+	var baselineCount = 0;
 	frames++;
 
 	for(i=0; i<particles.length; i++){
-		count += particles[i].y;
+		baselineCount += particles[i].y;
 		particles[i].drawCircle(context);
 		particles[i].update();
 		
 	}
 	var debugLineValue = (frames>10)?(gameAreaHeight-40):gameAreaHeight;
-	if(count > particles.length*debugLineValue){
+	if(baselineCount > particles.length*debugLineValue){
 		if(bounce){
 		var xRestart=getNewYSpeed();
-		var yRestart=random(-15,15);	
+		var yRestart=getNewXSpeed();
 		for(i=0; i<particles.length; i++){
 			particles[i].ySpeed = -45;
-			
 		}
 		bounce=false;
 		frames=0;
@@ -116,7 +120,7 @@ function myTimer(){
 	if(particleCount>particles.length){
 		if(frames % 8 == 0){
 			if(particles.length % 10 === 0) color = get_random_color();
-			if(particles.length % 30 === 0) xSpeed = random(-15,15);
+			if(particles.length % 30 === 0) xSpeed = getNewXSpeed();
 			var p = new Particle(gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
 			particles[particles.length] = p
 			if(particleCount===particles.length) bounce=true;
