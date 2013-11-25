@@ -183,32 +183,30 @@ function myTimer(){
 		debugLineValue = whatIsDebugLineValue();
 	}	
 	
-	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
-	 	state0();
-	}
-	
-	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
-		state52();
-	}
-	
-	if(stateMachine.getState()===2) {
-		state2();		
+	switch( stateMachine.getState() ){
+		case 0: 
+		case 10:
+			state0();
+			break;
+		case 2:
+			state2();
+			break;
+		case 52: 
+		case 18:
+			state52();
+			break;
+		case 7:
+	  		state7();
+	  		break;
+		case 8:
+	  		state8();
+	  		break;
+		default:
+	  		console.log("state = "+stateMachine.getState());
 	}
 	resetStateCheck(baselineCount, debugLineValue);
 	checkStopCreatingParticles();
-
-	if(stateMachine.getState()===7){
-		state7();
-	}
-
-	if(stateMachine.getState()===8){
-		state8();
-	}
-	
 	checkStopDeletingParticles();
-	
-	
-
 	if(debug) debugLine(baselineCount,debugLineValue,context);
 }
 
