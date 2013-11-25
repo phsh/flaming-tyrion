@@ -44,18 +44,16 @@ function getNewXSpeed(){
 	return random(-30,30);
 }
 
-function myTimer(){
-	window.requestAnimationFrame(myTimer);
-	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
+function updateParticles(context){
 	var baselineCount = 0;
-	timeDelayCounter++;
-
 	for(i=0; i<particles.length; i++){
 		baselineCount += particles[i].y;
 		particles[i].drawCircle(context);
 		particles[i].update();
-		
 	}
+	return baselineCount;
+}
+function whatIsDebugLineValue(timeDelayCounter){
 	var debugLineValue = gameAreaHeight;
 	if(timeDelayCounter>100){
 		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
@@ -65,6 +63,17 @@ function myTimer(){
 			debugLineValue = (gameAreaHeight/2);
 		}
 	}
+	
+	return debugLineValue;
+}
+
+function myTimer(){
+	window.requestAnimationFrame(myTimer);
+	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
+	var baselineCount = updateParticles(context);
+	timeDelayCounter++;
+	
+	var debugLineValue = whatIsDebugLineValue(timeDelayCounter);
 	if(baselineCount > particles.length*debugLineValue){
 		if(stateMachine.getState()===1){
 			stateMachine.setState(2);
