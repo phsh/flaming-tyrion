@@ -98,14 +98,6 @@ function myTimer(){
 		}
 	}
 	
-	if(stateMachine.getState() === 123456){
-		timeDelayCounter=0;
-		particles = new Array();
-		color = get_random_color();
-		ySpeed = getNewYSpeed();
-		stateMachine.setState(0);
-	}
-	
 	if(stateMachine.getState() === 2 || stateMachine.getState() == 18){
 		var xSpeedNew = -12;
 		var ySpeedNew =  -45;
