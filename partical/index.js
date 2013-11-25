@@ -2,6 +2,7 @@ var random = require('./random').random;
 var randomInt = require('./random').randomInt;
 var get_random_color = require('./random').get_random_color;
 var StateMachine = require('./statemachine').StateMachine;
+var Particle = require('./particle').Particle;
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
@@ -26,50 +27,6 @@ var context = canvas.getContext('2d');
 
 var stateMachine = new StateMachine();
 
-function Particle(init_x,init_y, xSpeed, ySpeed,color){
-	this.x = init_x;
-	this.y = init_y;
-	this.xSpeed = xSpeed;
-	this.ySpeed = ySpeed;
-	this.fillColor = color;
-	this.radie = ballSize;
-}
-
-Particle.prototype.update = function(){
-	this.x = this.x + this.xSpeed;
-	this.y = this.y + this.ySpeed;
-	this.ySpeed = this.ySpeed + gravity;
-	if (this.y > (gameAreaHeight-this.radie ) ) {
-		this.ySpeed = -this.ySpeed;
-		this.ySpeed = bounceIndex * this.ySpeed;
-		this.y = gameAreaHeight - this.radie;
-	}
-	if (this.y < this.radie) {
-		if(this.ySpeed < 0) {
-			this.ySpeed = -this.ySpeed;
-			this.ySpeed = bounceIndex * this.ySpeed;
-		}
-	}
-	if (this.x > (gameAreaWidth-this.radie)){
-			this.xSpeed = -Math.abs(this.xSpeed);
-	}
-	
-	if (this.x < this.radie){
-		this.xSpeed = Math.abs(this.xSpeed);
-	}
-	
-}
-
-Particle.prototype.drawCircle = function(context){
-	context.beginPath();
-	context.arc(this.x, this.y, this.radie, 0, 2 * Math.PI, false);
-	context.fillStyle = this.fillColor;
-	context.fill();
-	context.lineWidth =3;
-	context.strokeStyle = '#000000';
-	context.stroke();
-	
-}
 
 function debugLine(count,debugLineValue,context){
 	context.fillStyle="#FF0000";
@@ -132,7 +89,8 @@ function myTimer(){
 			}
 			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
 			
-			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
+			//var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
+			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 			particles[particles.length] = p
 			timeDelayCounter=0;
 		}
