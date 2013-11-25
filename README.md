@@ -5,7 +5,7 @@ The partical folder is the BBT project
 
 run by using:
  
-beefy particle.js
+beefy index.js
 
 
 **@that_phh** is the author 
