@@ -57,12 +57,14 @@ function myTimer(){
 		
 	}
 	var debugLineValue = gameAreaHeight;
+	if(timeDelayCounter>100){
 	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
 		debugLineValue = (gameAreaHeight-ballSize-10);
 	}
 	if( stateMachine.getState() === 11){
 		debugLineValue = (gameAreaHeight/2);
 	}
+}
 //	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-ballSize-10):gameAreaHeight;
 	
 	if(baselineCount > particles.length*debugLineValue){
