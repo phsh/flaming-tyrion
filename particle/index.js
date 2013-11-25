@@ -56,17 +56,14 @@ function updateParticles(context){
 	return baselineCount;
 }
 
-function whatIsDebugLineValue(timeDelayCounter){
+function whatIsDebugLineValue(){
 	var debugLineValue = gameAreaHeight-1;
-	if(timeDelayCounter.getCounter() > 100){
-		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
-			debugLineValue = (gameAreaHeight-ballSize-10);
-		}
-		if( stateMachine.getState() === 11){
-			debugLineValue = (gameAreaHeight/2);
-		}
+	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
+		debugLineValue = (gameAreaHeight-ballSize-10);
 	}
-	
+	if( stateMachine.getState() === 11){
+		debugLineValue = (gameAreaHeight/2);
+	}
 	return debugLineValue;
 }
 
@@ -74,7 +71,7 @@ function state2(){
 	
 }
 
-function state0(timeDelayCounter){
+function state0(){
 	if(timeDelayCounter.getCounter() % 8 == 0){
 		
 		if(particles.length % 5 === 0) {
@@ -86,7 +83,6 @@ function state0(timeDelayCounter){
 		particles[particles.length] = p
 		timeDelayCounter.reset();
 	}
-	return timeDelayCounter;
 }
 
 function myTimer(){
@@ -94,8 +90,10 @@ function myTimer(){
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
 	var baselineCount = updateParticles(context);
 	timeDelayCounter.count();
-	
-	var debugLineValue = whatIsDebugLineValue(timeDelayCounter);
+	var debugLineValue = gameAreaHeight-1;
+	if(timeDelayCounter.getCounter() > 100){
+		debugLineValue = whatIsDebugLineValue();
+	}
 	if(baselineCount > particles.length * debugLineValue){
 		if(stateMachine.getState()===1){
 			stateMachine.setState(2);
@@ -111,7 +109,7 @@ function myTimer(){
 	console.log(stateMachine.state);
 	
 	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
-	 	timeDelayCounter = 	state0(timeDelayCounter);
+	 	state0();
 	}
 	
 	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
