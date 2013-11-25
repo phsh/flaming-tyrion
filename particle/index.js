@@ -56,7 +56,7 @@ function updateParticles(context){
 }
 
 function whatIsDebugLineValue(timeDelayCounter){
-	var debugLineValue = gameAreaHeight;
+	var debugLineValue = gameAreaHeight-1;
 	if(timeDelayCounter>100){
 		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
 			debugLineValue = (gameAreaHeight-ballSize-10);
