@@ -194,7 +194,7 @@ function myTimer(){
 	if(stateMachine.getState()===2) {
 		state2();		
 	}
-	
+	resetStateCheck(baselineCount, debugLineValue);
 	checkStopCreatingParticles();
 
 	if(stateMachine.getState()===7){
