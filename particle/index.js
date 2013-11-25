@@ -166,12 +166,12 @@ function myTimer(){
 		if(stateMachine.getState()===10) stateMachine.setState(11);
 	}
 	if(stateMachine.getState()===7){
-		if(timeDelayCounter % 4 == 0){
+		if(timeDelayCounter.getCounter() % 4 == 0){
 			particles.pop();
 		}
 	}
 	if(stateMachine.getState()===8){
-		if(timeDelayCounter % 4 == 0){
+		if(timeDelayCounter.getCounter() % 4 == 0){
 			particles.shift();
 		}
 	}
