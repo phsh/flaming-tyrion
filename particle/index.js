@@ -3,6 +3,7 @@ var randomInt = require('./random').randomInt;
 var get_random_color = require('./random').get_random_color;
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
+var TimeState = require('./timestate').TimeState;
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
@@ -12,7 +13,7 @@ var gravity = 0.15;
 var canvas = document.createElement('canvas');
 var bounce = false;
 var enable_bounce = true;
-var timeDelayCounter = 0;
+var timeDelayCounter = new TimeState();
 var color  = get_random_color();
 var xSpeed = getNewXSpeed();
 var xStart = (gameAreaWidth/4);
@@ -57,7 +58,7 @@ function updateParticles(context){
 
 function whatIsDebugLineValue(timeDelayCounter){
 	var debugLineValue = gameAreaHeight-1;
-	if(timeDelayCounter>100){
+	if(timeDelayCounter.getCounter() > 100){
 		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
 			debugLineValue = (gameAreaHeight-ballSize-10);
 		}
@@ -74,7 +75,7 @@ function state2(){
 }
 
 function state0(timeDelayCounter){
-	if(timeDelayCounter % 8 == 0){
+	if(timeDelayCounter.getCounter() % 8 == 0){
 		
 		if(particles.length % 5 === 0) {
 			color = get_random_color();
@@ -83,7 +84,7 @@ function state0(timeDelayCounter){
 
 		var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 		particles[particles.length] = p
-		timeDelayCounter=0;
+		timeDelayCounter.reset();
 	}
 	return timeDelayCounter;
 }
@@ -92,7 +93,7 @@ function myTimer(){
 	window.requestAnimationFrame(myTimer);
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
 	var baselineCount = updateParticles(context);
-	timeDelayCounter++;
+	timeDelayCounter.count();
 	
 	var debugLineValue = whatIsDebugLineValue(timeDelayCounter);
 	if(baselineCount > particles.length * debugLineValue){
@@ -131,7 +132,7 @@ function myTimer(){
 			particles[i].y = yStartNew - (xSpeed*index_i) ;
 			particles[i].x = xStartNew - (ySpeed*index_i);
 		}
-		timeDelayCounter=0;
+		timeDelayCounter.reset();
 		
 		if(stateMachine.getState()===2) stateMachine.setState(4);
 		if(stateMachine.getState()===18) stateMachine.setState(7);
@@ -154,7 +155,7 @@ function myTimer(){
 			particles[i].y = ballSize;
 			particles[i].x = ballSize + i % (gameAreaWidth - ballSize);
 		}
-		timeDelayCounter=0;
+		timeDelayCounter.reset();
 		stateMachine.setState(7);
 	}
 	
