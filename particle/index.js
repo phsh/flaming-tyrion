@@ -105,7 +105,7 @@ function myTimer(){
 		}
 	}
 	
-	if(stateMachine.getState() === 2 || stateMachine.getState() == 18){
+	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
 		var xSpeedNew = -12;
 		var ySpeedNew =  -45;
 		var xStartNew = 100;
@@ -128,6 +128,29 @@ function myTimer(){
 		if(stateMachine.getState()===2) stateMachine.setState(4);
 		if(stateMachine.getState()===18) stateMachine.setState(7);
 	}
+	
+	if(stateMachine.getState()===2) {
+		var xSpeedNew = -12;
+		var ySpeedNew =  -45;
+		var xStartNew = 100;
+		var yStartNew = 100;
+		for(i=0; i<particles.length; i++){
+			var index_i = i % 5;
+			if(index_i === 0) {
+				xSpeedNew = getNewXSpeed();
+				ySpeedNew = getNewYSpeed();
+			}
+			
+			particles[i].ySpeed = xSpeedNew+index_i;
+			particles[i].xSpeed = ySpeedNew+index_i;
+			particles[i].y = ballSize;
+			particles[i].x = ballSize + i % (gameAreaWidth - ballSize);
+		}
+		timeDelayCounter=0;
+		stateMachine.setState(7);
+	}
+	
+	
 	
 	if(particleCount <= particles.length){
 		if(stateMachine.getState()===0) stateMachine.setState(1);
