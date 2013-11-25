@@ -18,6 +18,7 @@ var xSpeed = getNewXSpeed();
 var xStart = (gameAreaWidth/4);
 var ySpeed = getNewYSpeed();
 var particleCount = 100;
+var debug = true;
 var particles  = new Array();
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
@@ -53,6 +54,7 @@ function updateParticles(context){
 	}
 	return baselineCount;
 }
+
 function whatIsDebugLineValue(timeDelayCounter){
 	var debugLineValue = gameAreaHeight;
 	if(timeDelayCounter>100){
@@ -74,7 +76,7 @@ function myTimer(){
 	timeDelayCounter++;
 	
 	var debugLineValue = whatIsDebugLineValue(timeDelayCounter);
-	if(baselineCount > particles.length*debugLineValue){
+	if(baselineCount > particles.length * debugLineValue){
 		if(stateMachine.getState()===1){
 			stateMachine.setState(2);
 		}
@@ -84,9 +86,8 @@ function myTimer(){
 		if(stateMachine.getState()===11){
 			stateMachine.setState(8);
 		}
-		
-		
 	}
+	
 	console.log(stateMachine.state);
 	
 	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
@@ -132,7 +133,6 @@ function myTimer(){
 		if(stateMachine.getState()===0) stateMachine.setState(1);
 		if(stateMachine.getState()===10) stateMachine.setState(11);
 	}
-	
 	if(stateMachine.getState()===7){
 		if(timeDelayCounter % 4 == 0){
 			particles.pop();
@@ -144,7 +144,6 @@ function myTimer(){
 		}
 	}
 	
-	
 	if(particles.length < 1){
 		if(stateMachine.getState()=== 7){
 			stateMachine.setState(10);
@@ -152,10 +151,9 @@ function myTimer(){
 		if(stateMachine.getState()===8){
 			stateMachine.setState(0);
 		}
-		
-		
 	}
-	debugLine(baselineCount,debugLineValue,context);
+
+	if(debug) debugLine(baselineCount,debugLineValue,context);
 }
 
 myTimer();
