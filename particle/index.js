@@ -68,7 +68,61 @@ function whatIsDebugLineValue(){
 }
 
 function state2(){
+	var xSpeedNew = -12;
+	var ySpeedNew =  -45;
+	var xStartNew = 100;
+	var yStartNew = 100;
+	for(i=0; i<particles.length; i++){
+		var index_i = i % 5;
+		if(index_i === 0) {
+			xSpeedNew = getNewXSpeed();
+			ySpeedNew = getNewYSpeed();
+		}
+		
+		particles[i].ySpeed = xSpeedNew+index_i;
+		particles[i].xSpeed = ySpeedNew+index_i;
+		particles[i].y = ballSize;
+		particles[i].x = ballSize + (i*ballSize/2) % (gameAreaWidth - ballSize);
+	}
+	timeDelayCounter.reset();
+	stateMachine.setState(7);
+}
+
+function state52(){
+	var xSpeedNew = -12;
+	var ySpeedNew =  -45;
+	var xStartNew = 100;
+	var yStartNew = 100;
+	for(i=0; i<particles.length; i++){
+		if(i % 5 === 0) {
+			xSpeedNew = getNewXSpeed();
+			ySpeedNew = getNewYSpeed();
+			xStartNew = random(ballSize*4,gameAreaWidth-(ballSize*4));
+			yStartNew = random(ballSize*4,gameAreaHeight-(ballSize*4))
+		}
+		var index_i = i % 5;
+		particles[i].ySpeed = xSpeedNew 
+		particles[i].xSpeed = ySpeedNew - (gravity * index_i) ;
+		particles[i].y = yStartNew - (xSpeed*index_i) ;
+		particles[i].x = xStartNew - (ySpeed*index_i);
+	}
+	timeDelayCounter.reset();
 	
+	if(stateMachine.getState()===52) stateMachine.setState(4);
+	if(stateMachine.getState()===18) stateMachine.setState(7);	
+	
+}
+
+function state7(){
+	if(timeDelayCounter.getCounter() % 4 == 0){
+		particles.pop();
+	}
+}
+
+function state8(){
+	if(timeDelayCounter.getCounter() % 4 == 0){
+		particles.shift();
+	}
 }
 
 function state0(){
@@ -85,15 +139,7 @@ function state0(){
 	}
 }
 
-function myTimer(){
-	window.requestAnimationFrame(myTimer);
-	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
-	var baselineCount = updateParticles(context);
-	timeDelayCounter.count();
-	var debugLineValue = gameAreaHeight-1;
-	if(timeDelayCounter.getCounter() > 100){
-		debugLineValue = whatIsDebugLineValue();
-	}
+function resetStateCheck(baselineCount, debugLineValue){
 	if(baselineCount > particles.length * debugLineValue){
 		if(stateMachine.getState()===1){
 			stateMachine.setState(2);
@@ -105,75 +151,16 @@ function myTimer(){
 			stateMachine.setState(8);
 		}
 	}
-	
-	console.log(stateMachine.state);
-	
-	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
-	 	state0();
-	}
-	
-	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
-		var xSpeedNew = -12;
-		var ySpeedNew =  -45;
-		var xStartNew = 100;
-		var yStartNew = 100;
-		for(i=0; i<particles.length; i++){
-			if(i % 5 === 0) {
-				xSpeedNew = getNewXSpeed();
-				ySpeedNew = getNewYSpeed();
-				xStartNew = random(ballSize*4,gameAreaWidth-(ballSize*4));
-				yStartNew = random(ballSize*4,gameAreaHeight-(ballSize*4))
-			}
-			var index_i = i % 5;
-			particles[i].ySpeed = xSpeedNew 
-			particles[i].xSpeed = ySpeedNew - (gravity * index_i) ;
-			particles[i].y = yStartNew - (xSpeed*index_i) ;
-			particles[i].x = xStartNew - (ySpeed*index_i);
-		}
-		timeDelayCounter.reset();
-		
-		if(stateMachine.getState()===2) stateMachine.setState(4);
-		if(stateMachine.getState()===18) stateMachine.setState(7);
-	}
-	
-	if(stateMachine.getState()===2) {
-		var xSpeedNew = -12;
-		var ySpeedNew =  -45;
-		var xStartNew = 100;
-		var yStartNew = 100;
-		for(i=0; i<particles.length; i++){
-			var index_i = i % 5;
-			if(index_i === 0) {
-				xSpeedNew = getNewXSpeed();
-				ySpeedNew = getNewYSpeed();
-			}
-			
-			particles[i].ySpeed = xSpeedNew+index_i;
-			particles[i].xSpeed = ySpeedNew+index_i;
-			particles[i].y = ballSize;
-			particles[i].x = ballSize + i % (gameAreaWidth - ballSize);
-		}
-		timeDelayCounter.reset();
-		stateMachine.setState(7);
-	}
-	
-	
-	
+}
+
+function checkStopCreatingParticles(){
 	if(particleCount <= particles.length){
 		if(stateMachine.getState()===0) stateMachine.setState(1);
 		if(stateMachine.getState()===10) stateMachine.setState(11);
 	}
-	if(stateMachine.getState()===7){
-		if(timeDelayCounter.getCounter() % 4 == 0){
-			particles.pop();
-		}
-	}
-	if(stateMachine.getState()===8){
-		if(timeDelayCounter.getCounter() % 4 == 0){
-			particles.shift();
-		}
-	}
-	
+}
+
+function checkStopDeletingParticles(){
 	if(particles.length < 1){
 		if(stateMachine.getState()=== 7){
 			stateMachine.setState(10);
@@ -182,6 +169,45 @@ function myTimer(){
 			stateMachine.setState(0);
 		}
 	}
+}
+
+function myTimer(){
+	window.requestAnimationFrame(myTimer);
+	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
+	var baselineCount = updateParticles(context);
+	
+	timeDelayCounter.count();
+	
+	var debugLineValue = gameAreaHeight-1;
+	if(timeDelayCounter.getCounter() > 100){
+		debugLineValue = whatIsDebugLineValue();
+	}	
+	
+	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
+	 	state0();
+	}
+	
+	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
+		state52();
+	}
+	
+	if(stateMachine.getState()===2) {
+		state2();		
+	}
+	
+	checkStopCreatingParticles();
+
+	if(stateMachine.getState()===7){
+		state7();
+	}
+
+	if(stateMachine.getState()===8){
+		state8();
+	}
+	
+	checkStopDeletingParticles();
+	
+	
 
 	if(debug) debugLine(baselineCount,debugLineValue,context);
 }
