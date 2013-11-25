@@ -69,6 +69,25 @@ function whatIsDebugLineValue(timeDelayCounter){
 	return debugLineValue;
 }
 
+function state2(){
+	
+}
+
+function state0(timeDelayCounter){
+	if(timeDelayCounter % 8 == 0){
+		
+		if(particles.length % 5 === 0) {
+			color = get_random_color();
+		}
+		if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
+
+		var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
+		particles[particles.length] = p
+		timeDelayCounter=0;
+	}
+	return timeDelayCounter;
+}
+
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
 	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
@@ -91,18 +110,7 @@ function myTimer(){
 	console.log(stateMachine.state);
 	
 	if(stateMachine.getState() === 0 || stateMachine.getState() === 10){
-		if(timeDelayCounter % 8 == 0){
-			
-			if(particles.length % 5 === 0) {
-				color = get_random_color();
-				xStart += ballSize;
-			}
-			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
-
-			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
-			particles[particles.length] = p
-			timeDelayCounter=0;
-		}
+	 	timeDelayCounter = 	state0(timeDelayCounter);
 	}
 	
 	if(stateMachine.getState() === 52 || stateMachine.getState() == 18){
