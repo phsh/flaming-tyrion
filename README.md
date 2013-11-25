@@ -1,4 +1,11 @@
-Added the readme, for the flaming-tyrion project.
-================================================
-BouncyBallsTokyo, or BBT
-@that_phh 
+BouncyBallsOfTokyo, or BBoT
+===========
+The partical folder is the BBT project
+-----------
+
+run by using:
+ 
+beefy particle.js
+
+
+**@that_phh** is the author 
