@@ -1,6 +1,7 @@
 var random = require('./random').random;
 var randomInt = require('./random').randomInt;
 var get_random_color = require('./random').get_random_color;
+var StateMachine = require('./statemachine').StateMachine;
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
@@ -22,21 +23,6 @@ canvas.width=gameAreaWidth;
 document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
-
-function StateMachine(){
-	this.state = 0;
-	this.previousState = -1;
-}
-StateMachine.prototype.getState = function(){
-	return this.state;
-}
-StateMachine.prototype.getPreviousState = function(){
-	return this.previousState;
-}
-StateMachine.prototype.setState = function(newState){
-	this.previousState = this.state;
-	this.state = newState;
-}
 
 var stateMachine = new StateMachine();
 
