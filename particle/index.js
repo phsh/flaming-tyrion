@@ -58,15 +58,13 @@ function myTimer(){
 	}
 	var debugLineValue = gameAreaHeight;
 	if(timeDelayCounter>100){
-	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
-		debugLineValue = (gameAreaHeight-ballSize-10);
+		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
+			debugLineValue = (gameAreaHeight-ballSize-10);
+		}
+		if( stateMachine.getState() === 11){
+			debugLineValue = (gameAreaHeight/2);
+		}
 	}
-	if( stateMachine.getState() === 11){
-		debugLineValue = (gameAreaHeight/2);
-	}
-}
-//	var debugLineValue = (timeDelayCounter>10)?(gameAreaHeight-ballSize-10):gameAreaHeight;
-	
 	if(baselineCount > particles.length*debugLineValue){
 		if(stateMachine.getState()===1){
 			stateMachine.setState(2);
@@ -90,8 +88,7 @@ function myTimer(){
 				xStart += ballSize;
 			}
 			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
-			
-			//var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color);
+
 			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 			particles[particles.length] = p
 			timeDelayCounter=0;
