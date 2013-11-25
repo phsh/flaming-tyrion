@@ -1,6 +1,6 @@
 BouncyBallsOfTokyo, or BBoT
 ===========
-The partical folder is the BBT project
+The particle folder is the BBoT project
 -----------
 
 run by using:
