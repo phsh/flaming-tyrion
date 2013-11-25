@@ -6,7 +6,7 @@ TimeState.prototype.getCounter = function(){
 	return this.timeCounter;
 }
 
-TimeState.prototype.resetCounter = function(){
+TimeState.prototype.reset = function(){
 	this.timeCounter = 0;
 }
 
