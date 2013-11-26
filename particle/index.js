@@ -7,30 +7,33 @@ var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
 var TimeState = require('./timestate').TimeState;
 var ParticleUpdater = require('./particle_updater').ParticleUpdater;
+
+var stateMachine = new StateMachine();
+var particles  = new Array();
+var updater = new ParticleUpdater();
+var timeDelayCounter = new TimeState();
+
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
 var ballSize = 35; 
 var bounceIndex=0.75;
 var gravity = 0.15;
-var canvas = document.createElement('canvas');
-var timeDelayCounter = new TimeState();
-var color  = get_random_color();
-var xSpeed = getNewXSpeed();
-var xStart = (gameAreaWidth/4);
-var ySpeed = getNewYSpeed();
 var particleCount = 100;
 var debug = true;
-var particles  = new Array();
-var updater = new ParticleUpdater();
+
+var canvas = document.createElement('canvas');
+
+var color  = get_random_color();
+var xSpeed = getNewXSpeed();
+
+var ySpeed = getNewYSpeed();
+
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
 document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
-
-var stateMachine = new StateMachine();
-
 
 function debugLine(count,debugLineValue,context){
 	context.fillStyle="#FF0000";
@@ -97,7 +100,7 @@ function state2(){
 		particles[i].ySpeed = xSpeedNew+index_i;
 		particles[i].xSpeed = ySpeedNew+index_i;
 		particles[i].y = ballSize;
-		particles[i].x = gameAreaWidth-ballSize;// + (i*ballSize/2) % (gameAreaWidth - ballSize);
+		particles[i].x = gameAreaWidth-ballSize;
 	}
 	timeDelayCounter.reset();
 	stateMachine.setState(7);
