@@ -16,9 +16,10 @@ ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 		
 		particles[i].ySpeed = xSpeedNew+index_i;
 		particles[i].xSpeed = ySpeedNew+index_i;
-		particles[i].y = this.radie;
-		particles[i].x = this.radie;
+		particles[i].y = particles[i].radie;
+		particles[i].x = particles[i].radie;
 	}
+	console.log("DONE");
 }
 module.exports.ParticleUpdater = ParticleUpdater;
 
