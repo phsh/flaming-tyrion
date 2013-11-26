@@ -1,6 +1,8 @@
 var random = require('./random').random;
 var randomInt = require('./random').randomInt;
 var get_random_color = require('./random').get_random_color;
+var getNewXSpeed = require('./random').getNewXSpeed;
+var getNewYSpeed = require('./random').getNewYSpeed;
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
 var TimeState = require('./timestate').TimeState;
@@ -12,8 +14,6 @@ var ballSize = 35;
 var bounceIndex=0.75;
 var gravity = 0.15;
 var canvas = document.createElement('canvas');
-var bounce = false;
-var enable_bounce = true;
 var timeDelayCounter = new TimeState();
 var color  = get_random_color();
 var xSpeed = getNewXSpeed();
@@ -38,14 +38,6 @@ function debugLine(count,debugLineValue,context){
 	context.fillRect(0,whereAreTheBalls,gameAreaWidth,1);
 	context.fillStyle="#00FF00";
 	context.fillRect(0,debugLineValue,gameAreaWidth,1);
-}
-
-
-function getNewYSpeed(){
-	return random(-55,-25);
-}
-function getNewXSpeed(){
-	return random(-30,30);
 }
 
 function updateParticles(context){

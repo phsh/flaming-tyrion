@@ -14,7 +14,17 @@ function get_random_color() {
     return color;
 }
 
+function getNewYSpeed(){
+	return random(-55,-25);
+}
 
+function getNewXSpeed(){
+	return random(-30,30);
+}
+
+
+module.exports.getNewXSpeed = getNewXSpeed;
+module.exports.getNewYSpeed = getNewYSpeed;
 module.exports.random = random;
 module.exports.randomInt = randomInt;
 module.exports.get_random_color = get_random_color;
