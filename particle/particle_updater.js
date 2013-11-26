@@ -13,20 +13,13 @@ ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 			xSpeedNew = getNewXSpeed();
 			ySpeedNew = getNewYSpeed();
 		}
-		
-		particles[i].ySpeed = xSpeedNew+index_i;
-		particles[i].xSpeed = ySpeedNew+index_i;
-		particles[i].y = particles[i].radie;
-		particles[i].x = particles[i].radie;
+		var p = particles[i];
+		p.ySpeed = xSpeedNew+index_i;
+		p.xSpeed = ySpeedNew+index_i;
+		p.y = p.radie;
+		p.x = p.radie;
 	}
 	console.log("DONE");
 }
 module.exports.ParticleUpdater = ParticleUpdater;
 
-function getNewYSpeed(){
-	return random(-55,-25);
-}
-
-function getNewXSpeed(){
-	return random(-30,30);
-}

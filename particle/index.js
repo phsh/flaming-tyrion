@@ -26,7 +26,6 @@ var canvas = document.createElement('canvas');
 
 var color  = get_random_color();
 var xSpeed = getNewXSpeed();
-
 var ySpeed = getNewYSpeed();
 
 canvas.height=gameAreaHeight;
