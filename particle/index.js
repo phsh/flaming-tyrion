@@ -4,6 +4,7 @@ var get_random_color = require('./random').get_random_color;
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
 var TimeState = require('./timestate').TimeState;
+var ParticleUpdater = require('./particle_updater').ParticleUpdater;
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
 var gameAreaZ = 100;
@@ -21,6 +22,7 @@ var ySpeed = getNewYSpeed();
 var particleCount = 100;
 var debug = true;
 var particles  = new Array();
+var updater = new ParticleUpdater();
 canvas.height=gameAreaHeight;
 canvas.width=gameAreaWidth;
 document.body.appendChild(canvas);
@@ -67,6 +69,27 @@ function whatIsDebugLineValue(){
 	return debugLineValue;
 }
 
+function stateUpperLeftCorner(){
+	var xSpeedNew = -12;
+	var ySpeedNew =  -45;
+	var xStartNew = 100;
+	var yStartNew = 100;
+	for(i=0; i<particles.length; i++){
+		var index_i = i % 5;
+		if(index_i === 0) {
+			xSpeedNew = getNewXSpeed();
+			ySpeedNew = getNewYSpeed();
+		}
+		
+		particles[i].ySpeed = xSpeedNew+index_i;
+		particles[i].xSpeed = ySpeedNew+index_i;
+		particles[i].y = ballSize;
+		particles[i].x = ballSize;
+	}
+	timeDelayCounter.reset();
+	stateMachine.setState(7);
+}
+
 function state2(){
 	var xSpeedNew = -12;
 	var ySpeedNew =  -45;
@@ -82,11 +105,13 @@ function state2(){
 		particles[i].ySpeed = xSpeedNew+index_i;
 		particles[i].xSpeed = ySpeedNew+index_i;
 		particles[i].y = ballSize;
-		particles[i].x = ballSize + (i*ballSize/2) % (gameAreaWidth - ballSize);
+		particles[i].x = gameAreaWidth-ballSize;// + (i*ballSize/2) % (gameAreaWidth - ballSize);
 	}
 	timeDelayCounter.reset();
 	stateMachine.setState(7);
 }
+
+
 
 function state52(){
 	var xSpeedNew = -12;
@@ -189,7 +214,9 @@ function myTimer(){
 			state0();
 			break;
 		case 2:
-			state2();
+			updater.stateUpperLeftCorner(particles);
+			timeDelayCounter.reset();
+			stateMachine.setState(7);
 			break;
 		case 52: 
 		case 18:
