@@ -1,4 +1,7 @@
 var random = require('./random').random;
+var getNewXSpeed = require('./random').getNewXSpeed;
+var getNewYSpeed = require('./random').getNewYSpeed;
+
 function ParticleUpdater(){
 }
 
