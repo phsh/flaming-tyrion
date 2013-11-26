@@ -52,7 +52,7 @@ function updateParticles(context){
 	return baselineCount;
 }
 
-function whatIsDebugLineValue(){
+function getBaselineValue(){
 	var debugLineValue = gameAreaHeight-1;
 	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
 		debugLineValue = (gameAreaHeight-ballSize-10);
@@ -155,7 +155,7 @@ function myTimer(){
 	
 	var debugLineValue = gameAreaHeight-1;
 	if(timeDelayCounter.getCounter() > 100){
-		debugLineValue = whatIsDebugLineValue();
+		debugLineValue = getBaselineValue();
 	}	
 	
 	switch( stateMachine.getState() ){
