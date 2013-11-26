@@ -231,6 +231,7 @@ function myTimer(){
 		default:
 	  		console.log("state = "+stateMachine.getState());
 	}
+	
 	resetStateCheck(baselineCount, debugLineValue);
 	checkStopCreatingParticles();
 	checkStopDeletingParticles();
