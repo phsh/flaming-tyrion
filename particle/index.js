@@ -22,7 +22,7 @@ var gameAreaZ = 100;
 var ballSize = 35; 
 var bounceIndex=0.75;
 var gravity = 0.15;
-var particleCount = 50;
+var particleCount = 100;
 
 
 var canvas = document.createElement('canvas');
@@ -101,11 +101,11 @@ function removeParticles(doPop){
 function generateFromPoint(){
 	
 		
-		if(particles.length % 10 === 0) {
+		if(particles.length % 5 === 0) {
 			color = get_random_color();
 		}
 		
-		var Speed = 30;
+		var Speed = 40;
 		var xSpeedNew = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
 		var ySpeedNew = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
 		var p = new Particle( gameAreaWidth/2, gameAreaHeight/2, xSpeedNew, ySpeedNew ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
