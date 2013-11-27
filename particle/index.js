@@ -22,7 +22,7 @@ var gameAreaZ = 100;
 var ballSize = 35; 
 var bounceIndex=0.75;
 var gravity = 0.15;
-var particleCount = 100;
+var particleCount = 50;
 
 
 var canvas = document.createElement('canvas');
@@ -92,6 +92,7 @@ function state52(){
 }
 
 function removeParticles(doPop){
+	//f(timeDelayCounter.getCounter() > 30){
 	if(timeDelayCounter.getCounter() % 4 === 0){
 		(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 	}
@@ -100,7 +101,7 @@ function removeParticles(doPop){
 function generateFromPoint(){
 	
 		
-		if(particles.length % 5 === 0) {
+		if(particles.length % 10 === 0) {
 			color = get_random_color();
 		}
 		
@@ -109,7 +110,7 @@ function generateFromPoint(){
 		var ySpeedNew = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
 		var p = new Particle( gameAreaWidth/2, gameAreaHeight/2, xSpeedNew, ySpeedNew ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 		particles[particles.length] = p
-		timeDelayCounter.reset();
+	//	timeDelayCounter.reset();
 }
 
 function toRadians (angle) {
@@ -178,6 +179,8 @@ function myTimer(){
 		case 0: 
 		case 10:
 			generateFromPoint();
+			var doPop = true;
+			removeParticles(doPop);
 			//state0();
 			break;
 		case 2:
