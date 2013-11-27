@@ -88,17 +88,14 @@ function state52(){
 	
 }
 
-function state7(){
-	if(timeDelayCounter.getCounter() % 4 == 0){
-		particles.pop();
+
+function removeParticles(doPop){
+	if(timeDelayCounter.getCounter() % 4 === 0){
+		(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 	}
 }
 
-function state8(){
-	if(timeDelayCounter.getCounter() % 4 == 0){
-		particles.shift();
-	}
-}
+
 
 function state0(){
 	if(timeDelayCounter.getCounter() % 8 == 0){
@@ -172,11 +169,9 @@ function myTimer(){
 		case 18:
 			state52();
 			break;
-		case 7:
-	  		state7();
-	  		break;
-		case 8:
-	  		state8();
+		case 7: case 8:
+	  		var doPop = (stateMachine.getState() === 7);
+	  		removeParticles(doPop);
 	  		break;
 		default:
 	  		console.log("state = "+stateMachine.getState());
