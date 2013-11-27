@@ -7,11 +7,14 @@ var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
 var TimeState = require('./timestate').TimeState;
 var ParticleUpdater = require('./particle_updater').ParticleUpdater;
+var WorldSettings = require('./world').WorldSettings;
 
 var stateMachine = new StateMachine();
 var particles  = new Array();
 var updater = new ParticleUpdater();
 var timeDelayCounter = new TimeState();
+
+var world = new WorldSettings();
 
 var gameAreaHeight=600;
 var gameAreaWidth= 1200;
@@ -28,8 +31,8 @@ var color  = get_random_color();
 var xSpeed = getNewXSpeed();
 var ySpeed = getNewYSpeed();
 
-canvas.height=gameAreaHeight;
-canvas.width=gameAreaWidth;
+canvas.height=world.gameAreaHeight;
+canvas.width=world.gameAreaWidth;
 document.body.appendChild(canvas);
 
 var context = canvas.getContext('2d');
