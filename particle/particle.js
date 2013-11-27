@@ -36,6 +36,12 @@ Particle.prototype.update = function(){
 	
 }
 
+function ParticleSeeder(){
+	this.color = get_random_color();
+	this.xSpeed = getNewXSpeed();
+	this.ySpeed = getNewYSpeed();
+}
+
 Particle.prototype.drawCircle = function(context){
 	context.beginPath();
 	context.arc(this.x, this.y, this.radie, 0, 2 * Math.PI, false);
