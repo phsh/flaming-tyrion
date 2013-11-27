@@ -56,12 +56,12 @@ function updateParticles(context){
 }
 
 function getBaselineValue(){
-	var debugLineValue = gameAreaHeight-1;
+	var debugLineValue = world.gameAreaHeight-1;
 	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
-		debugLineValue = (gameAreaHeight-ballSize-10);
+		debugLineValue = (world.gameAreaHeight-world.ballSize-10);
 	}
 	if( stateMachine.getState() === 11){
-		debugLineValue = (gameAreaHeight/2);
+		debugLineValue = (world.gameAreaHeight/2);
 	}
 	return debugLineValue;
 }
