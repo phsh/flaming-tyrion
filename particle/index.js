@@ -145,7 +145,7 @@ function checkStopDeletingParticles(){
 
 function myTimer(){
 	window.requestAnimationFrame(myTimer);
-	context.clearRect(0,0,gameAreaWidth,gameAreaHeight);
+	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
 	var baselineCount = updateParticles(context);
 	
 	timeDelayCounter.count();
