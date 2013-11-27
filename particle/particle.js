@@ -11,7 +11,7 @@ function Particle(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,b
 	this.gravity = gravity;
 }
 
-function Particle( world , particleSeeder ){
+function ParticleA( world , particleSeeder ){
 	this.x = particleSeeder.xStart;
 	this.y = particleSeeder.yStart;
 	this.xSpeed = particleSeeder.xSpeed;
