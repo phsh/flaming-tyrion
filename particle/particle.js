@@ -12,10 +12,13 @@ function Particle(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,b
 }
 
 function ParticleA( world , particleSeeder ){
+	
 	this.x = particleSeeder.xStart;
 	this.y = particleSeeder.yStart;
 	this.xSpeed = particleSeeder.xSpeed;
 	this.ySpeed = particleSeeder.ySpeed;
+	this.fillColor = particleSeeder.color;
+
 	this.radie = world.ballSize;
 	this.bounceIndex = world.bounceIndex;
 	this.gameAreaHeight = world.gameAreaHeight;
@@ -52,6 +55,9 @@ function ParticleSeeder(){
 	this.color = get_random_color();
 	this.xSpeed = getNewXSpeed();
 	this.ySpeed = getNewYSpeed();
+	this.xStart = 0;
+	this.yStart = 0;
+
 }
 
 Particle.prototype.drawCircle = function(context){
