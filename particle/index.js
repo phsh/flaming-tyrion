@@ -75,8 +75,8 @@ function state52(){
 		if(i % 5 === 0) {
 			xSpeedNew = getNewXSpeed();
 			ySpeedNew = getNewYSpeed();
-			xStartNew = random(ballSize*4,gameAreaWidth-(ballSize*4));
-			yStartNew = random(ballSize*4,gameAreaHeight-(ballSize*4))
+			xStartNew = random(world.ballSize*4,world.gameAreaWidth-(world.ballSize*4));
+			yStartNew = random(world.ballSize*4,world.gameAreaHeight-(world.ballSize*4))
 		}
 		var index_i = i % 5;
 		particles[i].ySpeed = xSpeedNew 
@@ -91,14 +91,11 @@ function state52(){
 	
 }
 
-
 function removeParticles(doPop){
 	if(timeDelayCounter.getCounter() % 4 === 0){
 		(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 	}
 }
-
-
 
 function state0(){
 	if(timeDelayCounter.getCounter() % 8 == 0){

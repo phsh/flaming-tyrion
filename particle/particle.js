@@ -11,6 +11,18 @@ function Particle(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,b
 	this.gravity = gravity;
 }
 
+function Particle( world , particleSeeder ){
+	this.x = particleSeeder.xStart;
+	this.y = particleSeeder.yStart;
+	this.xSpeed = particleSeeder.xSpeed;
+	this.ySpeed = particleSeeder.ySpeed;
+	this.radie = world.ballSize;
+	this.bounceIndex = world.bounceIndex;
+	this.gameAreaHeight = world.gameAreaHeight;
+	this.gameAreaWidth = world.gameAreaWidth;
+	this.gravity = world.gravity;
+}
+
 Particle.prototype.update = function(){
 	this.x = this.x + this.xSpeed;
 	this.y = this.y + this.ySpeed;
@@ -52,6 +64,5 @@ Particle.prototype.drawCircle = function(context){
 	context.stroke();
 	
 }
-
 
 module.exports.Particle = Particle;
