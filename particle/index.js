@@ -23,7 +23,7 @@ var ballSize = 35;
 var bounceIndex=0.75;
 var gravity = 0.15;
 var particleCount = 100;
-var debug = true;
+
 
 var canvas = document.createElement('canvas');
 
@@ -180,7 +180,7 @@ function myTimer(){
 	resetStateCheck(baselineCount, debugLineValue);
 	checkStopCreatingParticles();
 	checkStopDeletingParticles();
-	if(debug) debugLine(baselineCount,debugLineValue,context);
+	if(world.debug) debugLine(baselineCount,debugLineValue,context);
 }
 
 myTimer();
