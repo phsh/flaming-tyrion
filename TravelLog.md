@@ -160,5 +160,26 @@ Day six (Last day)
 ==================
 Took a coffee in the lobby.
 
+Boat trip.
+
+Tried get up to the Skytree, big fail. Nice lunch with nice people.
+
+Back trying find trinkets. The Akasaba(?) place had a lot stuff. Bought all that I could find, and I can find alot of stuff.
+
+After that I wanted to see the Shibaya crossing, subway and then searching for 45 minutes, couldn't find it. But I made a small check before I should get back. Found it. And it was amazing, and the ordering of coffee at the Starbucks was also great. "Caffe Latte", and then everyone called it in serialzed. The staff told me I couldn't photo the crossing, but a small quick one I managed.
+Quickly back to the hotel. Everyone needed to validate their TrainTicket, and we all went together to the station. My roomie had my ticket. Lucky me!
+As the validating was trival we all chose to convine at a later date, I hadn't packed so I went to my room and fixed that. Then a small group wanted to meet and have some drinks in the Skybar, 30 stories above ground. The drinks weren't that amazing.
+Then we were off to the restaurant, after a short waiting session, we walked to the restaurant. Located in the basement of a building across the Swinagawa train station, and while we were waiting for seating, a very drunk Japanese buisnessman struck up conversation. He was very helpful and funny, but I'm not sure how his fellow buisness-friends liked that interaction.
+Once we were seated, the ordering commenced. Our Orderer tried to fix food for everyone, but everyone were not okay with that. And that created alot of confusion with waiters and our selfs, the Manager showed up, and after some waiving of arms, everything was sorted out. (I believe that he wanted to check with the Orderer that everything was under control, as other people ordered food than him.)  No one in the restaurant spoke any english, that made it that much more difficult.
+The food was varied and very good. The beer was also drinkable.
+After the food some people wanted to find more stuff to do. I was for a few minutes on that train, but since I saw who were in that I gang, The real hardcore, I declined when I saw someone who wanted to take a drink at the Hotel. A drink isn't the same thing as an allnighter...
+The hotel bar was very slow getting me my "hoto sake".
+
+
+
+
+
+
+
 
 
