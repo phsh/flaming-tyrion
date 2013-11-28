@@ -1,5 +1,6 @@
-This is the Travel log for the trip that initiated this project.
-==================================================
+What initiated this project?
+============================
+*My trip to Japan/Tokyo*
 
 Initial thoughts
 ================
