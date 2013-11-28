@@ -93,7 +93,6 @@
 	}
 
 	function removeParticles(doPop){
-		//f(timeDelayCounter.getCounter() > 30){
 		if(timeDelayCounter.getCounter() % 4 === 0){
 			(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 		}
@@ -118,9 +117,7 @@
 			}			
 			
 			var p = new Particle(world, particleSeed);
-			//var p = new Particle( gameAreaWidth/2, gameAreaHeight/2, xSpeedNew, ySpeedNew ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 			particles[particles.length] = p
-		//	timeDelayCounter.reset();
 	}
 
 		function toRadians ( angle ) {
