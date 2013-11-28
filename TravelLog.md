@@ -118,6 +118,7 @@ After dinner a small group was lost in Tokyo, me and two other guys, some mixup 
 
 
 The five bar night! (Shinbashi)
+
 	a) Almost empty bar, with fresh vegitables, sake
 	b) Not sitting with the Japanese, sake
 	c) Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
