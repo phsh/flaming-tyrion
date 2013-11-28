@@ -3,9 +3,7 @@ This is the Travel log for the trip that initiated this project.
 
 Initial thoughts
 ================
-
 I wonder what I will learn in the land of Tokyo.
----------------
 
 The Pre trip
 ===============
@@ -31,13 +29,12 @@ Had a glass of water. Thanks SAS! You are too kind...
 Now going down for landing to Kastrup. My ears are making there presence known.
 
 First leg: DONE, uneventful, no sandwich...
--------------------------------------------
+
 Pause in Copenhagen
 ===================
-
 Talked a bit about the merits of clocks, then entusiast won. Went through another passport control, I'm still me.
 Short walk until the last beer in Denmark, I got two of those. One was given to me by a kind soul. Discussions about the population in Tokyo, an export setteled that line of thought, none of our guides had that information. The beer was Carlsberg, the best beer in the world, probably not.
---------------------
+
 
 The flight to Nippon
 ====================
@@ -60,7 +57,6 @@ Tried watching Ghost in a Shell, but couldn't get through it. The subtitles wher
 Last hour of the flight, getting a sandwich after some hours of sleep and watching parts of Wolverine, but the now we are over the Ocean. Last stretch.
 Tired. But not too bad.
 
-----------------
 Landing in Tokyo
 ================
 Waiting for the tickets
@@ -108,7 +104,7 @@ The dinner was great I ate curry-nudles with some starter that arriaved as I ate
 
 After dinner some of us tried sturrring up some action, but the walk until we found some action broke me. Once we arriaved to the action arrieved, three of us jumped on a subway home instead. Best choise ever!
 
---------------------------------------
+
 Breakfast and more lecture (Day three)
 ======================================
 
@@ -121,20 +117,17 @@ Here we got to grill on the table, and one of the greatest meat-experiences I ha
 After dinner a small group was lost in Tokyo, me and two other guys, some mixup about what to do next, and we stopped somewhere for some drinks and those drinks became a epic Five Bar Night!
 
 
-The five bar night!
---------------------
+The five bar night! (Shinbashi)
 	a) Almost empty bar, with fresh vegitables, sake
 	b) Not sitting with the Japanese, sake
 	c) Shouting at the tv, with crazy japanese, sake
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 	e) Icheru and Ayu, Last bar. (Facebook) beer
----------------------
-Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
 
+Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
 
 Day four (Tired)
 ================
-
 Woke late and went slowly to the letures, got there precisly when we should eat lunch. We had heard of this fantastic Sushi, so we head there. The green haired man The Sushi Master was gonna do our sushi, but there wasn't any room for the whole group. The little lady showed us to the back room. Here there were room and nekkid art on the walls. There was also an recommendation from the Amabassdor of US. The sushi was eadible not much more... The GreenEaters had some problems ordering, according to the woman, Scrimp is a vegitable.
 
 Back for the last back half. Went through the testing framework, and the teacher made a small demonstration of it's use.
@@ -147,8 +140,6 @@ Then we were of to a specific bar. The Albatross bar. Everyone into different ca
 
 After some walking around in that area, we got bored, and our Club-master told us that we needed to go to WOMB, and no argument there. Into a cab, and then we where of again. 
 
-
-----------
 Day five (Post WOMB)
 ====================
 Slow to get up.
@@ -163,7 +154,7 @@ Ate at the Aussie Outback
 Drinks at the Mango Tree bar.
 
 Skype with the people at home.
-------------------------------
+
 
 Day six (Last day)
 ==================
