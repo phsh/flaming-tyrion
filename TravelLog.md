@@ -95,7 +95,7 @@ Once we left that, we treked around Rappungi for 30 minutes in search for a bar.
 
 Once we got the knowledge about the time, we made it over the street, but we made an extra round the block, as we didn't understand the sign. The porn-pusher told us that it was right infront of us... Very nice of him.
 
-The dinner was great I ate curry-nudles with some starter that arriaved as I ate the last piece of me real meal. Everything was great, but the food wasn't that musg better than the first lunch. Drank a couple of beers. We hade some minor difficultis ordering, but it could have been worse...
+The dinner was great I ate curry-nudles with some starter that arriaved as I ate the last piece of me real meal. Everything was great, but the food wasn't that mush better than the first lunch. Drank a couple of beers. We hade some minor difficultis ordering, but it could have been worse...
 
 After dinner some of us tried sturrring up some action, but the walk until we found some action broke me. Once we arriaved to the action arrieved, three of us jumped on a subway home instead. Best choise ever!
 
@@ -114,4 +114,14 @@ The five bar night!
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 	e) Icheru and Ayu, Last bar. (Facebook) beer
 
+Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
 
+
+Day four (Tired)
+================
+
+Woke late and went slowly to the letures, got there precisly when we should eat lunch. We had heard of this fantastic Sushi, so we head there. The green haired man The Sushi Master was gonna do our sushi, but there wasn't any room for the whole group. The little lady showed us to the back room. Here there were room and nekkid art on the walls. There was also an recommendation from the Amabassdor of US. The sushi was eadible not much more... The GreenEaters had some problems ordering, according to the woman, Scrimp is a vegitable.
+
+Back for the last back half. Went through the testing framework, and the teacher made a small demonstration of it's use.
+
+----------
