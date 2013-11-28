@@ -71,6 +71,7 @@ Particle.prototype.drawCircle = function(context){
 	context.stroke();
 	
 }
-//module.exports.ParticleA = ParticleA;
+
+
 module.exports.ParticleSeeder = ParticleSeeder;
 module.exports.Particle = Particle;
