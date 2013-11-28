@@ -130,4 +130,35 @@ Woke late and went slowly to the letures, got there precisly when we should eat 
 
 Back for the last back half. Went through the testing framework, and the teacher made a small demonstration of it's use.
 
+Ate at the Pork-place. The beer was amazing, some red beligian beer 9% that was a high light as a beer experience, the food was amazing again. The poor vegitarians had to manage again, I got more pork because of my tableer was a veggie. 
+
+After that the group was of to the bar accross the street "These" were we got to chose drinks from a platter. Two drinks at my table, but the other table had only one, since the service, while good was slow.
+
+Then we were of to a specific bar. The Albatross bar. Everyone into different cabs, but the people in mine didn't know where we were going. And as I was about to call a friend, he called me and they had tried follow a cab, but that cab wasn't the cab they were looking for. My boss knew were we where heading... The Albtross bar was tiny, we couldn't fit into the small bars in Tokyo. We found another place. The Egypt bar with Robot dancing. Two beers and then we were bored with the Robot dancing. (There was a colorized button, that once pushed made the bartender move like a robot.)
+
+After some walking around in that area, we got bored, and our Club-master told us that we needed to go to WOMB, and no argument there. Into a cab, and then we where of again. 
+
+
 ----------
+Day five (Post WOMB)
+====================
+Slow to get up.
+
+Cramp in my calfmuscles.
+
+Went to GeekLand for the experience. Found the Steve Jobs autobiografy as a Manga, and weird toys and trinkets.
+
+
+Drink in the lobby.
+Ate at the Aussie Outback
+Drinks at the Mango Tree bar.
+
+Skype with the people at home.
+------------------------------
+
+Day six (Last day)
+==================
+Took a coffee in the lobby.
+
+
+
