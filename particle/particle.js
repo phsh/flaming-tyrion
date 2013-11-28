@@ -1,4 +1,5 @@
-function Particle(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity){
+/* The Prototype of the Particle. [OLD DEAD CODE]
+function ParticleOld(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity){
 	this.x = init_x;
 	this.y = init_y;
 	this.xSpeed = xSpeed;
@@ -10,8 +11,8 @@ function Particle(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,b
 	this.gameAreaWidth  = gameAreaWidth
 	this.gravity = gravity;
 }
-
-function ParticleA( world , particleSeeder ){
+*/
+function Particle( world , particleSeeder ){
 	
 	this.x = particleSeeder.xStart;
 	this.y = particleSeeder.yStart;
@@ -52,9 +53,9 @@ Particle.prototype.update = function(){
 }
 
 function ParticleSeeder(){
-	this.color = get_random_color();
-	this.xSpeed = getNewXSpeed();
-	this.ySpeed = getNewYSpeed();
+	this.color = "blue";
+	this.xSpeed = 0;
+	this.ySpeed = 0;
 	this.xStart = 0;
 	this.yStart = 0;
 
@@ -70,5 +71,6 @@ Particle.prototype.drawCircle = function(context){
 	context.stroke();
 	
 }
-
+//module.exports.ParticleA = ParticleA;
+module.exports.ParticleSeeder = ParticleSeeder;
 module.exports.Particle = Particle;

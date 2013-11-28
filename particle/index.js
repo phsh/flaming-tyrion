@@ -8,6 +8,7 @@
 	var TimeState = require('./timestate').TimeState;
 	var ParticleUpdater = require('./particle_updater').ParticleUpdater;
 	var WorldSettings = require('./world').WorldSettings;
+	var ParticleSeeder = require('./particle').ParticleSeeder;
 
 	var stateMachine = new StateMachine();
 	var particles  = new Array();
@@ -22,6 +23,7 @@
 	var bounceIndex=0.75;
 	var gravity = 0.15;
 	var particleCount = 100;
+	var particleSeed = new ParticleSeeder();
 
 
 	var canvas = document.createElement('canvas');
@@ -96,15 +98,27 @@
 			(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 		}
 	}
+	
+	function seedFromPoint(particleSeed){
+		particleSeed.xStart = world.gameAreaWidth / 2;
+		particleSeed.yStart = world.gameAreaHeight / 2;
+	}
+
+	function generateRandomColor(particleSeed){
+		particleSeed.color = get_random_color();
+	}
 
 	function generateFromPoint(){
-			if(particles.length % 5 === 0) {
-				color = get_random_color();
-			}			
 			var Speed = 40;
-			var xSpeedNew = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
-			var ySpeedNew = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
-			var p = new Particle( gameAreaWidth/2, gameAreaHeight/2, xSpeedNew, ySpeedNew ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
+			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
+			particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
+
+			if(particles.length % 5 === 0) {
+				generateRandomColor(particleSeed);
+			}			
+			
+			var p = new Particle(world, particleSeed);
+			//var p = new Particle( gameAreaWidth/2, gameAreaHeight/2, xSpeedNew, ySpeedNew ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
 			particles[particles.length] = p
 		//	timeDelayCounter.reset();
 	}
@@ -174,6 +188,7 @@
 		switch( stateMachine.getState() ){
 			case 0: 
 			case 10:
+				seedFromPoint(particleSeed);
 				generateFromPoint();
 				var doPop = true;
 				removeParticles(doPop);
