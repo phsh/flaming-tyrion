@@ -99,11 +99,17 @@ The dinner was great I ate curry-nudles with some starter that arriaved as I ate
 
 After dinner some of us tried sturrring up some action, but the walk until we found some action broke me. Once we arriaved to the action arrieved, three of us jumped on a subway home instead. Best choise ever!
 
---------------------------
+--------------------------------------
 Breakfast and more lecture (Day three)
-==========================
+======================================
 
+After the lectures we went and Akasuka to see the old town. The Temple was pretty awesome, and I tried the fortune thing. 66 Bad Fortune, was the outcome. We walked around the Temple area and watched/photod all the parts of the Temple, once that was done we made our way towards a bar, but finding a bar was more difficult than we could imagine. We walked along the river an saw the SkyTree and took some photos of it and the moon, that was showing. After some more hunting of bars we finally found a place that served beer and sake for the group. Eight people is a huge group in Tokyo.
 
+After the sake and beer was in our bellies, we had a reservation at the Korean barbecue, and we were very close.
+
+Here we got to grill on the table, and one of the greatest meat-experiences I have ever partaken in. Kobe sushi.... The cold raw meat melted on the tongue. HIGH LIGHT! One of the group arriaved late, but our table had shown extreme constrants and left food for him. The service was amazing. I had to go to the bathroom, the waiter told me to sit down, he would call me once the bathroom was availible. Which he did! A rare event in other part of the world.
+
+After dinner a small group was lost in Tokyo, me and two other guys, some mixup about what to do next, and we stopped somewhere for some drinks and those drinks became a epic Five Bar Night!
 
 
 The five bar night!
@@ -113,7 +119,7 @@ The five bar night!
 	c) Shouting at the tv, with crazy japanese, sake
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 	e) Icheru and Ayu, Last bar. (Facebook) beer
-
+---------------------
 Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
 
 
