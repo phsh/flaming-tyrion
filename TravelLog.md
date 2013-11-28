@@ -120,7 +120,7 @@ After dinner a small group was lost in Tokyo, me and two other guys, some mixup 
 The five bar night! (Shinbashi)
 	a) Almost empty bar, with fresh vegitables, sake
 	b) Not sitting with the Japanese, sake
-	c) Shouting at the tv, with crazy japanese, sake
+	c) Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 	e) Icheru and Ayu, Last bar. (Facebook) beer
 
@@ -142,30 +142,19 @@ After some walking around in that area, we got bored, and our Club-master told u
 
 Day five (Post WOMB)
 ====================
-Slow to get up.
-
-Cramp in my calfmuscles.
-
+Slow to get up, had cramp in my calfmuscles apparently I'm not 22 anymore.
 Went to GeekLand for the experience. Found the Steve Jobs autobiografy as a Manga, and weird toys and trinkets.
-
-
-Drink in the lobby.
-Ate at the Aussie Outback
-Drinks at the Mango Tree bar.
-
-Skype with the people at home.
-
+While waiting for the late group. We took a drink in the lobby. Okay nothing more.
+As our leader had done something to his foot we chose not to travel that far, and found a Steakhouse close by. Aussie Outback Steakhouse.
+The waiter told us in perfekt english that she spoke no english... Apparently the japanese charachers can be read phoneticly. We tried ordering, and that went as expected some problems and a few waiters, but we managed. The Womb-gang drank a pitcher of Beer and a bottle of wine. After dinner we went to the Mango Tree bar, where we drank a few drinks, before I excused myself for some skypeing with Sweden.
+After that I was supposed to join the Womb-gang, but my brain asked once if that was such a smart thing to do. And I answered no, and went to sleep instead.
 
 Day six (Last day)
 ==================
 Took a coffee in the lobby.
-
 Boat trip.
-
 Tried get up to the Skytree, big fail. Nice lunch with nice people.
-
 Back trying find trinkets. The Akasaba(?) place had a lot stuff. Bought all that I could find, and I can find alot of stuff.
-
 After that I wanted to see the Shibaya crossing, subway and then searching for 45 minutes, couldn't find it. But I made a small check before I should get back. Found it. And it was amazing, and the ordering of coffee at the Starbucks was also great. "Caffe Latte", and then everyone called it in serialzed. The staff told me I couldn't photo the crossing, but a small quick one I managed.
 Quickly back to the hotel. Everyone needed to validate their TrainTicket, and we all went together to the station. My roomie had my ticket. Lucky me!
 As the validating was trival we all chose to convine at a later date, I hadn't packed so I went to my room and fixed that. Then a small group wanted to meet and have some drinks in the Skybar, 30 stories above ground. The drinks weren't that amazing.
