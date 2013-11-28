@@ -1,5 +1,4 @@
-This is the README.md FILE and it's pretty awesome
-
+This is the Travel log for the trip that initiated this project.
 ==================================================
 
 1) Initial thoughts.
@@ -77,15 +76,16 @@ d) Back to the Hotel
 
 e) The restaurant experience
  We had planed for a short dinner experience since everyone was tired. There was a traditional Japanese place around the corner. We managed to get a table and starting ordering like crazy, we very extreme novicies, but alot of food arrived. And once everyone was done, more food arriaved. The food was good, Sachimi, not for me, but since the table was ladled with food, I got my full, and we were of to seven-eleven. Found somethings that I wouldn't normally would eat... great stuff, cheap.
-=========================
+-------------------
 Start of the course
-
+===================
 After some wired problems with travel. 
 The Tokyo trafic was more difficult than expected. Alot of people on the Subway.
 
 First lunch on our own. AMAZING!
 We hade some problems ordering food, but managed somehow got the most amazing lunch. Boild food at the table, pork and scrimp. Schumi schumi. We learned how to prepare our food, once we left the place. 1200 yes. I laught until I cried about how we missed how we have eaten our food. The weird silver thing in the middle of the table was important.
 
+*Schabo schabo* is the correct name for that food.
 
 More lecture, alot of people was tired. I wasn't focused. The thing with the maybe-function was totally lost on me, and I believe that I won't be able to explain the Decorator-pattern funcionality.
 
@@ -97,19 +97,21 @@ Once we got the knowledge about the time, we made it over the street, but we mad
 
 The dinner was great I ate curry-nudles with some starter that arriaved as I ate the last piece of me real meal. Everything was great, but the food wasn't that musg better than the first lunch. Drank a couple of beers. We hade some minor difficultis ordering, but it could have been worse...
 
-After dinner some of us tried sturrring up some action, but the walk until we found some action broke me... Once the action arrieved, three of us jumped on a subway home instead. Best choise ever...
+After dinner some of us tried sturrring up some action, but the walk until we found some action broke me. Once we arriaved to the action arrieved, three of us jumped on a subway home instead. Best choise ever!
 
-=====================================================
-
+--------------------------
+Breakfast and more lecture (Day three)
+==========================
 
 
 
 
 The five bar night!
-a) Almost empty bar, with fresh vegitables, sake
-b) Not sitting with the Japanese, sake
-c) Shouting at the tv, with crazy japanese, sake
-d) Whisky bar, beer and serano (Facebook), beer
-e) Icheru and Ayu, Last bar.(facebook), beer
+--------------------
+	a) Almost empty bar, with fresh vegitables, sake
+	b) Not sitting with the Japanese, sake
+	c) Shouting at the tv, with crazy japanese, sake
+	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
+	e) Icheru and Ayu, Last bar. (Facebook) beer
 
 
