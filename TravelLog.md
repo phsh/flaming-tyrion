@@ -1,14 +1,14 @@
 This is the Travel log for the trip that initiated this project.
 ==================================================
 
-1) Initial thoughts.
+Initial thoughts
+================
 
 I wonder what I will learn in the land of Tokyo.
+---------------
 
-
-==================================================
-
-2) The Pre trip
+The Pre trip
+===============
 The trip has begun. I'm heading to the Terminal 5 Arlanda... Sitting and coding on the train I'm early to the Terminal. An hour before all other traverlers will arrivie.
 I'm alone on the train... Isn't anyone going this early abroad?
 Arrived at the airport.
@@ -31,16 +31,16 @@ Had a glass of water. Thanks SAS! You are too kind...
 Now going down for landing to Kastrup. My ears are making there presence known.
 
 First leg: DONE, uneventful, no sandwich...
-=========================================================
-Pause in Copenhagen.
+-------------------------------------------
+Pause in Copenhagen
+===================
 
 Talked a bit about the merits of clocks, then entusiast won. Went through another passport control, I'm still me.
 Short walk until the last beer in Denmark, I got two of those. One was given to me by a kind soul. Discussions about the population in Tokyo, an export setteled that line of thought, none of our guides had that information. The beer was Carlsberg, the best beer in the world, probably not.
+--------------------
 
-==========================================================
-
-The flight to Nippon.
-
+The flight to Nippon
+====================
 The normal safety guide had a bonus. "Please don't sleep in the aile." A new one.
 One of the files that I was supposed to view was broken. Weird. I thought that USB-sticks where eternal! My roomie is sleeping already, and my bench buddy is watching Elasyum. I will be watching my The Daily Show as always. 
 One short commit on the Flight and I will be happy...
@@ -60,22 +60,31 @@ Tried watching Ghost in a Shell, but couldn't get through it. The subtitles wher
 Last hour of the flight, getting a sandwich after some hours of sleep and watching parts of Wolverine, but the now we are over the Ocean. Last stretch.
 Tired. But not too bad.
 
-=========================
-Landing in Tokyo.
-a) Waiting for the tickets.
- We got to the airport and after getting my finger prints the Passport control let me into the bagage claim. And once I saw my wifes beatiful red bag, I went through the customer control, I passed that too. I'm the man! Oh, I signed two papers for the possibility to stay in Japan for a week...
- Our rice-leader(?) got us some ticket and we were of the (Two a:s, with an O above them, and three lines after). That place. On the train I ate some riceballs... Good, nothing more.
+----------------
+Landing in Tokyo
+================
+Waiting for the tickets
+------------------------
+We got to the airport and after getting my finger prints the Passport control let me into the bagage claim. And once I saw my wifes beatiful red bag, I went through the customer control, I passed that too. I'm the man! Oh, I signed two papers for the possibility to stay in Japan for a week...
+Our rice-leader(?) got us some ticket and we were of the (Two a:s, with an O above them, and three lines after). That place. On the train I ate some riceballs... Good, nothing more.
 
-b) To the hotel and en exellent lunch experience.
- Our roomies got switch by the Hotel, nothing to worry about but still... We decided for a quick lunch since we had an appointment with the Manga-people. Found a crazy cheap place, and the food was excellent.
-c) To the park and the missing Manga people
- As the thing with Manga people was in the early morning, the experience of seeing that was not availible, we walked in the park instead of rushing of to a bar. The park and the temple was good and I'm glad that I got to see that. Alot of people were wearing Traditional Japanese cloths... Alot of playful children with elaborate costums.
- After the park closed, we wondered the streets of shopping Tokyo, alot of people and alot of stuff. We tried finding a bar, we finally stoped at a Wolfgang Puck Express Bar. The beer was uneventful.
-d) Back to the Hotel
- Subway back, we stoped at the weird gaming place. Reconning until we dare try it...
+To the hotel and en exellent lunch experience.
+----------------------------------------------
+Our roomies got switch by the Hotel, nothing to worry about but still... We decided for a quick lunch since we had an appointment with the Manga-people. Found a crazy cheap place, and the food was excellent.
 
-e) The restaurant experience
- We had planed for a short dinner experience since everyone was tired. There was a traditional Japanese place around the corner. We managed to get a table and starting ordering like crazy, we very extreme novicies, but alot of food arrived. And once everyone was done, more food arriaved. The food was good, Sachimi, not for me, but since the table was ladled with food, I got my full, and we were of to seven-eleven. Found somethings that I wouldn't normally would eat... great stuff, cheap.
+To the park and the missing Manga people
+----------------------------------------
+As the thing with Manga people was in the early morning, the experience of seeing that was not availible, we walked in the park instead of rushing of to a bar. The park and the temple was good and I'm glad that I got to see that. Alot of people were wearing Traditional Japanese cloths... Alot of playful children with elaborate costums.
+After the park closed, we wondered the streets of shopping Tokyo, alot of people and alot of stuff. We tried finding a bar, we finally stoped at a Wolfgang Puck Express Bar. The beer was uneventful.
+
+Back to the Hotel
+-----------------
+Subway back, we stoped at the weird gaming place. Reconning until we dare try it...
+
+The restaurant experience
+-------------------------
+We had planed for a short dinner experience since everyone was tired. There was a traditional Japanese place around the corner. We managed to get a table and starting ordering like crazy, we very extreme novicies, but alot of food arrived. And once everyone was done, more food arriaved. The food was good, Sachimi, not for me, but since the table was ladled with food, I got my full, and we were of to seven-eleven. Found somethings that I wouldn't normally would eat... great stuff, cheap.
+
 -------------------
 Start of the course
 ===================
