@@ -138,6 +138,7 @@
 			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
 
 			addParticle();
+			timeDelayCounter.reset();
 		}
 	}
 
@@ -186,7 +187,7 @@
 		switch( state ){
 			case 0: 
 				state0();
-				timeDelayCounter.reset();
+				
 				break;
 			case 10:
 				seedFromPoint(particleSeed);
