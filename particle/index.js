@@ -28,11 +28,6 @@
 
 	var canvas = document.createElement('canvas');
 
-	/*
-	var color  = get_random_color();
-	var xSpeed = getNewXSpeed();
-	var ySpeed = getNewYSpeed();
-	*/
 	canvas.height=world.gameAreaHeight;
 	canvas.width=world.gameAreaWidth;
 	document.body.appendChild(canvas);
@@ -66,31 +61,6 @@
 			debugLineValue = (world.gameAreaHeight/2);
 		}
 		return debugLineValue;
-	}
-
-	function state52(){
-		var xSpeedNew = -12;
-		var ySpeedNew =  -45;
-		var xStartNew = 100;
-		var yStartNew = 100;
-		for(i=0; i<particles.length; i++){
-			if(i % 5 === 0) {
-				xSpeedNew = getNewXSpeed();
-				ySpeedNew = getNewYSpeed();
-				xStartNew = random(world.ballSize*4,world.gameAreaWidth-(world.ballSize*4));
-				yStartNew = random(world.ballSize*4,world.gameAreaHeight-(world.ballSize*4))
-			}
-			var index_i = i % 5;
-			particles[i].ySpeed = xSpeedNew 
-			particles[i].xSpeed = ySpeedNew - (gravity * index_i) ;
-			particles[i].y = yStartNew - (xSpeed*index_i) ;
-			particles[i].x = xStartNew - (ySpeed*index_i);
-		}
-		timeDelayCounter.reset();
-		
-		if(stateMachine.getState()===52) stateMachine.setState(4);
-		if(stateMachine.getState()===18) stateMachine.setState(7);	
-		
 	}
 
 	function removeParticles(doPop){
@@ -203,10 +173,6 @@
 				updater.stateUpperLeftCorner(particles);
 				timeDelayCounter.reset();
 				stateMachine.setState(7);
-				break;
-			case 52: 
-			case 18:
-				state52();
 				break;
 			case 7: case 8:
 		  		var doPop = (stateMachine.getState() === 7);
