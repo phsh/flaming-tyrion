@@ -175,6 +175,7 @@
 				stateMachine.setState(10);
 			}
 			if(stateMachine.getState()===8){
+				createSeederFromMiddleOfBottomLine(particleSeed);
 				stateMachine.setState(0);
 			}
 		}
