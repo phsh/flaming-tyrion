@@ -180,19 +180,8 @@
 		}
 	}
 
-	function myTimer(){
-		window.requestAnimationFrame(myTimer);
-		context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
-		var baselineCount = updateParticles(context);
-		
-		timeDelayCounter.count();
-		
-		var debugLineValue = gameAreaHeight-1;
-		if(timeDelayCounter.getCounter() > 100){
-			debugLineValue = getBaselineValue();
-		}	
-		
-		switch( stateMachine.getState() ){
+	function checkState(state){
+		switch( state ){
 			case 0: 
 				state0();
 				break;
@@ -219,6 +208,22 @@
 			default:
 		  		console.log("state = "+stateMachine.getState());
 		}
+
+	}
+
+	function myTimer(){
+		window.requestAnimationFrame(myTimer);
+		context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
+		var baselineCount = updateParticles(context);
+		
+		timeDelayCounter.count();
+		
+		var debugLineValue = gameAreaHeight-1;
+		if(timeDelayCounter.getCounter() > 100){
+			debugLineValue = getBaselineValue();
+		}	
+		
+		checkState(stateMachine.getState());
 		
 		resetStateCheck(baselineCount, debugLineValue);
 		checkStopCreatingParticles();
