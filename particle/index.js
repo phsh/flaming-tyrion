@@ -211,8 +211,8 @@
 
 	}
 
-	function myTimer(){
-		window.requestAnimationFrame(myTimer);
+	function animationFunction(){
+		window.requestAnimationFrame(animationFunction);
 		context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
 		var baselineCount = updateParticles(context);
 		
@@ -232,4 +232,4 @@
 	}
 	createSeederFromMiddleOfBottomLine(particleSeed);
 
-	myTimer();
+	animationFunction();
