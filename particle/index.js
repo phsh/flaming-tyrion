@@ -15,13 +15,6 @@
 	var updater = new ParticleUpdater();
 	var timeDelayCounter = new TimeState();
 	var world = new WorldSettings();
-
-	var gameAreaHeight=600;
-	var gameAreaWidth= 1200;
-	var ballSize = 35; 
-	var bounceIndex=0.75;
-	var gravity = 0.15;
-	var particleCount = 100;
 	var particleSeed = new ParticleSeeder();
 	
 
@@ -109,7 +102,7 @@
 			particleSeed.ySpeed = 20;
 			particleSeed.yStart = world.ballSize;
 			particleSeed.xSpeed = 0;
-			particleSeed.xStart = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * ballSize)) + ballSize;
+			particleSeed.xStart = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * world.ballSize)) + world.ballSize;
 			if(particles.length % 5 === 0) {
 				generateRandomColor(particleSeed);
 			}
@@ -129,7 +122,7 @@
 	}
 
 	function checkForParticleLimit(){
-		if(particleCount <= particles.length){
+		if(world.particleCount <= particles.length){
 			if(stateMachine.getState()===0) stateMachine.setState(1);
 			if(stateMachine.getState()===10) stateMachine.setState(11);
 		}
@@ -188,7 +181,7 @@ function animationFunction(){
 	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
 	var baselineCount = updateParticles(context);
 	timeDelayCounter.count();		
-	var debugLineValue = gameAreaHeight-1;
+	var debugLineValue = world.gameAreaHeight-1;
 	if(timeDelayCounter.getCounter() > 100){
 		debugLineValue = getBaselineValue();
 	}	
