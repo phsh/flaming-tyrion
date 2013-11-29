@@ -108,6 +108,15 @@
 		particleSeed.color = get_random_color();
 	}
 
+	function createSeederFromMiddleOfBottomLine(particleSeed){
+		generateRandomColor(particleSeed);
+		particleSeed.xSpeed = getNewXSpeed();
+		particleSeed.ySpeed = getNewYSpeed();
+		particleSeed.xStart = world.gameAreaWidth/2;
+		particleSeed.yStart = world.gameAreaHeight;
+	}
+
+
 	function generateFromPoint(){
 			var Speed = 40;
 			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
@@ -129,7 +138,7 @@
 	  return angle * ( Math.PI / 180);
 	}
 
-	function state0(){
+	function createParticleAsFontain(){
 		if(timeDelayCounter.getCounter() % 8 == 0){
 			
 			if(particles.length % 5 === 0) {
@@ -142,13 +151,7 @@
 		}
 	}
 
-	function createSeederFromMiddleOfBottomLine(particleSeed){
-		generateRandomColor(particleSeed);
-		particleSeed.xSpeed = getNewXSpeed();
-		particleSeed.ySpeed = getNewYSpeed();
-		particleSeed.xStart = world.gameAreaWidth/2;
-		particleSeed.yStart = world.gameAreaHeight;
-	}
+	
 
 	function resetStateCheck(baselineCount, debugLineValue){
 		if(baselineCount > particles.length * debugLineValue){
@@ -186,8 +189,7 @@
 	function checkState(state){
 		switch( state ){
 			case 0: 
-				state0();
-				
+				createParticleAsFontain();
 				break;
 			case 10:
 				seedFromPoint(particleSeed);
