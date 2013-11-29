@@ -153,8 +153,9 @@ After that I was supposed to join the Womb-gang, but my brain asked once if that
 
 Day six (Last day)
 ==================
-Took a coffee in the lobby.
-Boat trip, space boat on the river. The travel companions of our group was a school class, that filled up the boat. The children was very well behavied, but not magically so.
+Took a coffee in the lobby, while waiting for my friends, the coffein made me aware that I had been missing it for a few days. I wasn't hungover after all. The coffe was drinkable.
+A short trainride to the docks. A very nice elderly lady "helped" us with the machine for the ticket buying. The boat was some sort of spaceboat. The travel companions of our group was a school class, that filled up the boat. The children was very well behavied, but not magically so.
+The boat ride was mostly a check of all the crazy skyscrapers that was lineing the city. The 30 story high buildings was dwarfed by their 50+ counterparts. Once we were on dry land again, we made the walk to the Skytree.
 Tried get up to the Skytree, big fail. Nice lunch with nice people. The lunch was pasta with basile and shrimp.
 Back trying find trinkets. The Akasaba(?) place had a lot stuff. Bought all that I could find, and I can find alot of stuff.
 After that I wanted to see the Shibaya crossing, subway and then searching for 45 minutes, couldn't find it. But I made a small check before I should get back. Found it. And it was amazing, and the ordering of coffee at the Starbucks was also great. "Caffe Latte", and then everyone called it in serialzed. The staff told me I couldn't photo the crossing, but a small quick one I managed.
