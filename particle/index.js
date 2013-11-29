@@ -68,10 +68,10 @@
 			(doPop) ? updater.statePopRemove( particles ) : updater.stateShiftRemove(particles);
 		}
 	}
-	
-	function seedFromPoint(particleSeed){
-		particleSeed.xStart = world.gameAreaWidth / 2;
-		particleSeed.yStart = world.gameAreaHeight / 2;
+
+	function seedFromPoint(particleSeed, x, y){
+		particleSeed.xStart = x; 
+		particleSeed.yStart = y;
 	}
 
 	function generateRandomColor(particleSeed){
@@ -82,27 +82,24 @@
 		generateRandomColor(particleSeed);
 		particleSeed.xSpeed = getNewXSpeed();
 		particleSeed.ySpeed = getNewYSpeed();
-		particleSeed.xStart = world.gameAreaWidth/2;
-		particleSeed.yStart = world.gameAreaHeight;
+		seedFromPoint(particleSeed, ( world.gameAreaWidth / 2), world.gameAreaHeight);
 	}
 
 	function addParticle(){
 		var p = new Particle(world, particleSeed);
-			particles[particles.length] = p;
+		particles[particles.length] = p;
 	}
 
 	function toRadians ( angle ) {
-	  return angle * ( Math.PI / 180);
+		return angle * ( Math.PI / 180);
 	}
 
 	function createParticleAsFontain(){
 		if(timeDelayCounter.getCounter() % 8 == 0){
-			
 			if(particles.length % 5 === 0) {
 				generateRandomColor(particleSeed);
 			}
 			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
-
 			addParticle();
 			timeDelayCounter.reset();
 		}
@@ -117,26 +114,20 @@
 			if(particles.length % 5 === 0) {
 				generateRandomColor(particleSeed);
 			}
-
 			addParticle();
 			timeDelayCounter.reset();
 		}
 	}
 
-
 	function createParticleAsCircle(){
-			var Speed = 40;
-			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
-			particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
-
-			if(particles.length % 5 === 0) {
-				generateRandomColor(particleSeed);
-			}			
-			addParticle();
-			
+		var Speed = 40;
+		particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
+		particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );			
+		if(particles.length % 5 === 0) {
+			generateRandomColor(particleSeed);
+		}			
+		addParticle();
 	}
-
-	
 
 	function checkForParticleLimit(){
 		if(particleCount <= particles.length){
@@ -154,7 +145,6 @@
 		}
 	}
 
-
 	function checkState(state){
 		switch( state ){
 			case 20: 
@@ -164,7 +154,7 @@
 				createParticleAsRain();
 				break;
 			case 10:
-				seedFromPoint(particleSeed);
+				seedFromPoint( particleSeed, (world.gameAreaWidth / 2), (world.gameAreaHeight / 2) );
 				createParticleAsCircle();
 				var doPop = true;
 				removeParticles(doPop);
