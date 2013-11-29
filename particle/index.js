@@ -18,7 +18,6 @@
 
 	var gameAreaHeight=600;
 	var gameAreaWidth= 1200;
-	var gameAreaZ = 100;
 	var ballSize = 35; 
 	var bounceIndex=0.75;
 	var gravity = 0.15;
@@ -145,34 +144,33 @@
 		}
 	}
 
-	function checkState(state){
-		switch( state ){
-			case 20: 
-				createParticleAsFontain();
-				break;
-			case 0:
-				createParticleAsRain();
-				break;
-			case 10:
-				seedFromPoint( particleSeed, (world.gameAreaWidth / 2), (world.gameAreaHeight / 2) );
-				createParticleAsCircle();
-				var doPop = true;
-				removeParticles(doPop);
-				break;
-			case 2:
-				updater.stateUpperLeftCorner(particles);
-				timeDelayCounter.reset();
-				stateMachine.setState(7);
-				break;
-			case 7: case 8:
-		  		var doPop = (stateMachine.getState() === 7);
-		  		removeParticles(doPop);
-		  		break;
-			default:
-		  		console.log("state = "+stateMachine.getState());
-		}
-
+function checkState(state){
+	switch( state ){
+		case 20: 
+			createParticleAsFontain();
+			break;
+		case 0:
+			createParticleAsRain();
+			break;
+		case 10:
+			seedFromPoint( particleSeed, (world.gameAreaWidth / 2), (world.gameAreaHeight / 2) );
+			createParticleAsCircle();
+			var doPop = true;
+			removeParticles(doPop);
+			break;
+		case 2:
+			updater.stateUpperLeftCorner(particles);
+			timeDelayCounter.reset();
+			stateMachine.setState(7);		
+			break;
+		case 7: case 8:
+			var doPop = (stateMachine.getState() === 7);
+			removeParticles(doPop);
+			break;
+		default:
+			console.log("state = "+stateMachine.getState());
 	}
+}
 
 function resetStateCheck(baselineCount, debugLineValue){
 		if(baselineCount > particles.length * debugLineValue){
@@ -200,5 +198,5 @@ function animationFunction(){
 	if(world.debug) debugLine(baselineCount,debugLineValue,context);
 }
 
-	createSeederFromMiddleOfBottomLine(particleSeed);
-	animationFunction();
+createSeederFromMiddleOfBottomLine(particleSeed);
+animationFunction();
