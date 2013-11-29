@@ -138,6 +138,22 @@
 		}
 	}
 
+	function createParticleAsRain(){
+		if(timeDelayCounter.getCounter() % 3 == 0){
+			particleSeed.ySpeed = 20;
+			particleSeed.yStart = world.ballSize;
+			particleSeed.xSpeed = 0;
+			particleSeed.xStart = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * ballSize)) + ballSize;
+			if(particles.length % 5 === 0) {
+				generateRandomColor(particleSeed);
+			}
+
+			addParticle();
+			timeDelayCounter.reset();
+		}
+	}
+
+
 	function createParticleAsCircle(){
 			var Speed = 40;
 			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
@@ -185,8 +201,11 @@
 
 	function checkState(state){
 		switch( state ){
-			case 0: 
+			case 20: 
 				createParticleAsFontain();
+				break;
+			case 0:
+				createParticleAsRain();
 				break;
 			case 10:
 				seedFromPoint(particleSeed);
@@ -226,12 +245,11 @@
 		}	
 		
 		checkState(stateMachine.getState());
-		
 		resetStateCheck(baselineCount, debugLineValue);
 		checkStopCreatingParticles();
 		checkStopDeletingParticles();
 		if(world.debug) debugLine(baselineCount,debugLineValue,context);
 	}
-	createSeederFromMiddleOfBottomLine(particleSeed);
 
+	createSeederFromMiddleOfBottomLine(particleSeed);
 	animationFunction();
