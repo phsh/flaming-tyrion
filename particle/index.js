@@ -109,7 +109,7 @@
 	}
 
 	function createParticleAsRain(){
-		if(timeDelayCounter.getCounter() % 3 == 0){
+		if(timeDelayCounter.getCounter() % 8 == 0){
 			particleSeed.ySpeed = 20;
 			particleSeed.yStart = world.ballSize;
 			particleSeed.xSpeed = 0;
@@ -184,14 +184,10 @@
 
 	}
 
-
 function resetStateCheck(baselineCount, debugLineValue){
 		if(baselineCount > particles.length * debugLineValue){
 			if(stateMachine.getState()===1){
 				stateMachine.setState(2);
-			}
-			if(stateMachine.getState()===4){
-				stateMachine.setState(18);
 			}
 			if(stateMachine.getState()===11){
 				stateMachine.setState(8);
@@ -199,23 +195,20 @@ function resetStateCheck(baselineCount, debugLineValue){
 		}
 	}
 
-	function animationFunction(){
-		window.requestAnimationFrame(animationFunction);
-		context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
-		var baselineCount = updateParticles(context);
-		
-		timeDelayCounter.count();
-		
-		var debugLineValue = gameAreaHeight-1;
-		if(timeDelayCounter.getCounter() > 100){
-			debugLineValue = getBaselineValue();
-		}	
-		
-		checkState(stateMachine.getState());
-		resetStateCheck(baselineCount, debugLineValue);
-		checkForParticleLimit()
-		if(world.debug) debugLine(baselineCount,debugLineValue,context);
-	}
+function animationFunction(){
+	window.requestAnimationFrame(animationFunction);
+	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
+	var baselineCount = updateParticles(context);
+	timeDelayCounter.count();		
+	var debugLineValue = gameAreaHeight-1;
+	if(timeDelayCounter.getCounter() > 100){
+		debugLineValue = getBaselineValue();
+	}	
+	checkState(stateMachine.getState());
+	resetStateCheck(baselineCount, debugLineValue);
+	checkForParticleLimit()
+	if(world.debug) debugLine(baselineCount,debugLineValue,context);
+}
 
 	createSeederFromMiddleOfBottomLine(particleSeed);
 	animationFunction();
