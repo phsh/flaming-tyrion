@@ -116,19 +116,6 @@
 		particleSeed.yStart = world.gameAreaHeight;
 	}
 
-
-	function generateFromPoint(){
-			var Speed = 40;
-			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
-			particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
-
-			if(particles.length % 5 === 0) {
-				generateRandomColor(particleSeed);
-			}			
-			addParticle();
-			
-	}
-
 	function addParticle(){
 		var p = new Particle(world, particleSeed);
 			particles[particles.length] = p;
@@ -151,7 +138,17 @@
 		}
 	}
 
-	
+	function createParticleAsCircle(){
+			var Speed = 40;
+			particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
+			particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );
+
+			if(particles.length % 5 === 0) {
+				generateRandomColor(particleSeed);
+			}			
+			addParticle();
+			
+	}
 
 	function resetStateCheck(baselineCount, debugLineValue){
 		if(baselineCount > particles.length * debugLineValue){
@@ -193,7 +190,7 @@
 				break;
 			case 10:
 				seedFromPoint(particleSeed);
-				generateFromPoint();
+				createParticleAsCircle();
 				var doPop = true;
 				removeParticles(doPop);
 				break;
