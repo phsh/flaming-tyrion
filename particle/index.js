@@ -121,7 +121,7 @@
 			particles[particles.length] = p
 	}
 
-		function toRadians ( angle ) {
+	function toRadians ( angle ) {
 	  return angle * ( Math.PI / 180);
 	}
 
