@@ -166,28 +166,13 @@
 			
 	}
 
-	function resetStateCheck(baselineCount, debugLineValue){
-		if(baselineCount > particles.length * debugLineValue){
-			if(stateMachine.getState()===1){
-				stateMachine.setState(2);
-			}
-			if(stateMachine.getState()===4){
-				stateMachine.setState(18);
-			}
-			if(stateMachine.getState()===11){
-				stateMachine.setState(8);
-			}
-		}
-	}
+	
 
-	function checkStopCreatingParticles(){
+	function checkForParticleLimit(){
 		if(particleCount <= particles.length){
 			if(stateMachine.getState()===0) stateMachine.setState(1);
 			if(stateMachine.getState()===10) stateMachine.setState(11);
 		}
-	}
-
-	function checkStopDeletingParticles(){
 		if(particles.length < 1){
 			if(stateMachine.getState()=== 7){
 				stateMachine.setState(10);
@@ -198,6 +183,7 @@
 			}
 		}
 	}
+
 
 	function checkState(state){
 		switch( state ){
@@ -232,6 +218,21 @@
 
 	}
 
+
+function resetStateCheck(baselineCount, debugLineValue){
+		if(baselineCount > particles.length * debugLineValue){
+			if(stateMachine.getState()===1){
+				stateMachine.setState(2);
+			}
+			if(stateMachine.getState()===4){
+				stateMachine.setState(18);
+			}
+			if(stateMachine.getState()===11){
+				stateMachine.setState(8);
+			}
+		}
+	}
+
 	function animationFunction(){
 		window.requestAnimationFrame(animationFunction);
 		context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
@@ -246,8 +247,7 @@
 		
 		checkState(stateMachine.getState());
 		resetStateCheck(baselineCount, debugLineValue);
-		checkStopCreatingParticles();
-		checkStopDeletingParticles();
+		checkForParticleLimit()
 		if(world.debug) debugLine(baselineCount,debugLineValue,context);
 	}
 
