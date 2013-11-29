@@ -24,14 +24,15 @@
 	var gravity = 0.15;
 	var particleCount = 100;
 	var particleSeed = new ParticleSeeder();
-
+	
 
 	var canvas = document.createElement('canvas');
 
+	/*
 	var color  = get_random_color();
 	var xSpeed = getNewXSpeed();
 	var ySpeed = getNewYSpeed();
-
+	*/
 	canvas.height=world.gameAreaHeight;
 	canvas.width=world.gameAreaWidth;
 	document.body.appendChild(canvas);
@@ -128,14 +129,23 @@
 		if(timeDelayCounter.getCounter() % 8 == 0){
 			
 			if(particles.length % 5 === 0) {
-				color = get_random_color();
+				generateRandomColor(particleSeed);
 			}
-			if(particles.length % 20 === 0) xSpeed = getNewXSpeed();
+			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
 
-			var p = new Particle( gameAreaWidth/2, gameAreaHeight-ballSize, xSpeed, ySpeed ,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity);
+			var p = new Particle( world, particleSeed);
 			particles[particles.length] = p
+			console.log("particles " + particles.length);
 			timeDelayCounter.reset();
 		}
+	}
+
+	function createSeederFromMiddleOfBottomLine(particleSeed){
+		generateRandomColor(particleSeed);
+		particleSeed.xSpeed = getNewXSpeed();
+		particleSeed.ySpeed = getNewYSpeed();
+		particleSeed.xStart = world.gameAreaWidth/2;
+		particleSeed.yStart = world.gameAreaHeight;
 	}
 
 	function resetStateCheck(baselineCount, debugLineValue){
@@ -184,12 +194,14 @@
 		
 		switch( stateMachine.getState() ){
 			case 0: 
+				state0();
+				break;
 			case 10:
 				seedFromPoint(particleSeed);
 				generateFromPoint();
 				var doPop = true;
 				removeParticles(doPop);
-				//state0();
+				
 				break;
 			case 2:
 				updater.stateUpperLeftCorner(particles);
@@ -213,5 +225,6 @@
 		checkStopDeletingParticles();
 		if(world.debug) debugLine(baselineCount,debugLineValue,context);
 	}
+	createSeederFromMiddleOfBottomLine(particleSeed);
 
 	myTimer();
