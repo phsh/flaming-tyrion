@@ -116,9 +116,13 @@
 			if(particles.length % 5 === 0) {
 				generateRandomColor(particleSeed);
 			}			
+			addParticle();
 			
-			var p = new Particle(world, particleSeed);
-			particles[particles.length] = p
+	}
+
+	function addParticle(){
+		var p = new Particle(world, particleSeed);
+			particles[particles.length] = p;
 	}
 
 	function toRadians ( angle ) {
@@ -133,10 +137,7 @@
 			}
 			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
 
-			var p = new Particle( world, particleSeed);
-			particles[particles.length] = p
-			console.log("particles " + particles.length);
-			timeDelayCounter.reset();
+			addParticle();
 		}
 	}
 
@@ -185,13 +186,13 @@
 		switch( state ){
 			case 0: 
 				state0();
+				timeDelayCounter.reset();
 				break;
 			case 10:
 				seedFromPoint(particleSeed);
 				generateFromPoint();
 				var doPop = true;
 				removeParticles(doPop);
-				
 				break;
 			case 2:
 				updater.stateUpperLeftCorner(particles);
