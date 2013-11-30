@@ -26,9 +26,9 @@
 
 	var context = canvas.getContext('2d');
 
-	function debugLine(count,debugLineValue,context){
+	function debugLine(baselineCount,debugLineValue,context){
 		context.fillStyle="#FF0000";
-		var whereAreTheBalls = (count/world.particleCount);
+		var whereAreTheBalls = (baselineCount/world.particleCount);
 		context.fillRect(0,whereAreTheBalls,world.gameAreaWidth,1);
 		context.fillStyle="#00FF00";
 		context.fillRect(0,debugLineValue,world.gameAreaWidth,1);
