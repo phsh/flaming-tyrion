@@ -26,7 +26,7 @@
 
 	var context = canvas.getContext('2d');
 
-	function debugLine(baselineCount,debugLineValue,context){
+	function displayDebugLine(baselineCount,debugLineValue,context){
 		context.fillStyle="#FF0000";
 		var whereAreTheBalls = (baselineCount/world.particleCount);
 		context.fillRect(0,whereAreTheBalls,world.gameAreaWidth,1);
@@ -188,7 +188,7 @@ function animationFunction(){
 	checkState(stateMachine.getState());
 	resetStateCheck(baselineCount, debugLineValue);
 	checkForParticleLimit()
-	if(world.debug) debugLine(baselineCount,debugLineValue,context);
+	if(world.debug) displayDebugLine(baselineCount,debugLineValue,context);
 }
 
 seedFromMiddleOfBottomLine(particleSeed);
