@@ -145,7 +145,7 @@ After some walking around in that area, we got bored, and our Club-master told u
 Day five (Post WOMB)
 ====================
 Slow to get up, had cramp in my calfmuscles apparently I'm not 22 anymore.
-Went to GeekLand for the experience. Found the Steve Jobs autobiografy as a Manga, and weird toys and trinkets.
+Went to GeekLand (Akihabara) for the experience. Found the Steve Jobs autobiografy as a Manga, and weird toys and trinkets. The 6 storybuilding was pretty awesome, all the collectables I ever wanted in one place. Magic the gathering, Gundan, all the plastic figurines I have ever thought of. If you could think it, it exists in Akihabara.
 While waiting for the late group. We took a drink in the lobby. Okay nothing more.
 As our leader had done something to his foot we chose not to travel that far, and found a Steakhouse close by. Aussie Outback Steakhouse.
 The waiter told us in perfekt english that she spoke no english... Apparently the japanese charachers can be read phoneticly. We tried ordering, and that went as expected some problems and a few waiters, but we managed. The Womb-gang drank a pitcher of Beer and a bottle of wine. After dinner we went to the Mango Tree bar, where we drank a few drinks, before I excused myself for some skypeing with Sweden.
