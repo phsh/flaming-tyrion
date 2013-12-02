@@ -1,17 +1,3 @@
-/* The Prototype of the Particle. [OLD DEAD CODE]
-function ParticleOld(init_x,init_y, xSpeed, ySpeed,color, ballSize,gameAreaHeight,bounceIndex, gameAreaWidth,gravity){
-	this.x = init_x;
-	this.y = init_y;
-	this.xSpeed = xSpeed;
-	this.ySpeed = ySpeed;
-	this.fillColor = color;
-	this.radie = ballSize;
-	this.gameAreaHeight = gameAreaHeight
-	this.bounceIndex = bounceIndex;
-	this.gameAreaWidth  = gameAreaWidth
-	this.gravity = gravity;
-}
-*/
 function Particle( world , particleSeeder ){
 	
 	this.x = particleSeeder.xStart;
