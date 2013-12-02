@@ -64,7 +64,7 @@
 		particleSeed.color = get_random_color();
 	}
 
-	function seedFromMiddleOfBottomLine(particleSeed){
+	function seedMiddleOfBottomline(particleSeed){
 		generateRandomColor(particleSeed);
 		particleSeed.xSpeed = getNewXSpeed();
 		particleSeed.ySpeed = getNewYSpeed();
@@ -125,7 +125,7 @@
 				stateMachine.setState(10);
 			}
 			if(stateMachine.getState()===8){
-				seedFromMiddleOfBottomLine(particleSeed);
+				seedMiddleOfBottomline(particleSeed);
 				stateMachine.setState(0);
 			}
 		}
@@ -185,5 +185,5 @@ function animationFunction(){
 	if(world.debug) debug.displayDebugLine(baselineCount,debugLineValue,context,world);
 }
 
-seedFromMiddleOfBottomLine(particleSeed);
+seedMiddleOfBottomline(particleSeed);
 animationFunction();
