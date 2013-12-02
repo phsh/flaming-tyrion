@@ -9,6 +9,7 @@
 	var ParticleUpdater = require('./particle_updater').ParticleUpdater;
 	var WorldSettings = require('./world').WorldSettings;
 	var ParticleSeeder = require('./particle').ParticleSeeder;
+	var Debug = require('./debug').Debug;
 
 	var stateMachine = new StateMachine();
 	var particles  = new Array();
@@ -16,7 +17,7 @@
 	var timeDelayCounter = new TimeState();
 	var world = new WorldSettings();
 	var particleSeed = new ParticleSeeder();
-	
+	var debug = new Debug();
 
 	var canvas = document.createElement('canvas');
 
@@ -26,14 +27,7 @@
 
 	var context = canvas.getContext('2d');
 
-	function displayDebugLine(baselineCount,debugLineValue,context){
-		context.fillStyle="#FF0000";
-		var whereAreTheBalls = (baselineCount/world.particleCount);
-		context.fillRect(0,whereAreTheBalls,world.gameAreaWidth,1);
-		context.fillStyle="#00FF00";
-		context.fillRect(0,debugLineValue,world.gameAreaWidth,1);
-	}
-
+	
 	function updateParticles(context){
 		var baselineCount = 0;
 		for(i=0; i<particles.length; i++){
@@ -188,7 +182,7 @@ function animationFunction(){
 	checkState(stateMachine.getState());
 	resetStateCheck(baselineCount, debugLineValue);
 	checkForParticleLimit()
-	if(world.debug) displayDebugLine(baselineCount,debugLineValue,context);
+	if(world.debug) debug.displayDebugLine(baselineCount,debugLineValue,context,world);
 }
 
 seedFromMiddleOfBottomLine(particleSeed);
