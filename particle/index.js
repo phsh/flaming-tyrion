@@ -71,7 +71,7 @@
 		seedFromPoint(particleSeed, ( world.gameAreaWidth / 2), world.gameAreaHeight);
 	}
 
-	function addParticle(){
+	function addParticle(particles){
 		var p = new Particle(world, particleSeed);
 		particles[particles.length] = p;
 	}
@@ -86,7 +86,7 @@
 				generateRandomColor(particleSeed);
 			}
 			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
-			addParticle();
+			addParticle(particles);
 			timeDelayCounter.reset();
 		}
 	}
@@ -100,7 +100,7 @@
 			if(particles.length % 5 === 0) {
 				generateRandomColor(particleSeed);
 			}
-			addParticle();
+			addParticle(particles);
 			timeDelayCounter.reset();
 		}
 	}
@@ -112,7 +112,7 @@
 		if(particles.length % 5 === 0) {
 			generateRandomColor(particleSeed);
 		}			
-		addParticle();
+		addParticle(particles);
 	}
 
 	function checkForParticleLimit(){
