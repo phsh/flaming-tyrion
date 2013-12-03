@@ -170,6 +170,37 @@ function resetStateCheck(baselineCount, debugLineValue){
 		}
 	}
 
+var currentState = stateOne;
+var nextState = stateTwo;
+
+function stateOne(){
+
+	createParticleAsFontain();
+	nextState = stateTwo();
+}
+
+function stateTwo(){
+	updater.stateUpperLeftCorner(particles);
+	nextState = stateThree();
+}
+
+function stateThree(){
+	var doPop = true;
+	removeParticles(doPop);
+	nextState = stateFour();
+}
+
+function stateFour(){
+	createParticleAsCircle();
+	nextState = stateFive();
+}
+
+function stateFive(){
+	var doPop = false;
+	removeParticles(doPop);
+	nextState = stateOne();
+}
+
 function animationFunction(){
 	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
 	var baselineCount = updateParticles(context);
@@ -177,12 +208,13 @@ function animationFunction(){
 	var debugLineValue = world.gameAreaHeight-1;
 	if(timeDelayCounter.getCounter() > 100){
 		debugLineValue = getBaselineValue();
-	}	
-	checkState(stateMachine.getState());
-	resetStateCheck(baselineCount, debugLineValue);
-	checkForParticleLimit()
+	}
+	//animationFunction = currentState();
+	//checkState(stateMachine.getState());
+	//resetStateCheck(baselineCount, debugLineValue);
+	//checkForParticleLimit()
 	if(world.debug) debug.displayDebugLine(baselineCount,debugLineValue,context,world);
-	window.requestAnimationFrame(animationFunction);
+	window.requestAnimationFrame(currentState);
 	
 }
 
