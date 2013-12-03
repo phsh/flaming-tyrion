@@ -120,14 +120,14 @@ We ran out through the gates of the subway station and jumped into the first ava
 
 The five bar night! (Shinbashi)
 
-	a) Almost empty bar, with fresh vegitables, sake
-	This bar was on the second floor on the same side of the street as the girly-bar. There was just a few guests at that place, we were not that drunk, so we mostly discussed the course and ordered a hot sake. There were complementary fresh vegitables and a dip sauce. Very nice! That place had one of those space toilets, so the group all went to the bathroom, SEPERATLY. That toilet had a interesting feature after flushing, the water that filled the next flush, poured so that you could wash your hands in that... Environment friendly space toilet!
-	b) Not sitting with the Japanese, sake
-	The next place was more of a restaurant, we were placed not in the vicinity of the other guests. We drank a hot sake, and watched the scenary, one japanese guest was crazy drunk, and that group when we left was a little embarreced. There wasn't that many people in that restaurant so we left and tried another place.
-	c) Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
-	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
-	Discussions with the local patrons, those two japanese who worked at the event-place, fixing conferences and exibitions, wonder what they were doing there at that late time? We ate a plate of Serano ham carved at the bar. This was a whisky place so no Sake, we drank a beer and then we stopped bothering those two patrons and the two bartenders.
-	e) Icheru and Ayu, Last bar. (Facebook) beer
+* Almost empty bar, with fresh vegitables, sake
+This bar was on the second floor on the same side of the street as the girly-bar. There was just a few guests at that place, we were not that drunk, so we mostly discussed the course and ordered a hot sake. There were complementary fresh vegitables and a dip sauce. Very nice! That place had one of those space toilets, so the group all went to the bathroom, SEPERATLY. That toilet had a interesting feature after flushing, the water that filled the next flush, poured so that you could wash your hands in that... Environment friendly space toilet!
+* Not sitting with the Japanese, sake
+The next place was more of a restaurant, we were placed not in the vicinity of the other guests. We drank a hot sake, and watched the scenary, one japanese guest was crazy drunk, and that group when we left was a little embarreced. There wasn't that many people in that restaurant so we left and tried another place.
+* Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
+* Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
+Discussions with the local patrons, those two japanese who worked at the event-place, fixing conferences and exibitions, wonder what they were doing there at that late time? We ate a plate of Serano ham carved at the bar. This was a whisky place so no Sake, we drank a beer and then we stopped bothering those two patrons and the two bartenders.
+* Icheru and Ayu, Last bar. (Facebook) beer
 
 Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
 
