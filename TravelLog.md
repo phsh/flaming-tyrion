@@ -116,12 +116,14 @@ After the sake and beer was in our bellies, we had a reservation at the Korean b
 Here we got to grill on the table, and one of the greatest meat-experiences I have ever partaken in. Kobe sushi.... The cold raw meat melted on the tongue. HIGH LIGHT! One of the group arriaved late, but our table had shown extreme constrants and left food for him. The service was amazing. I had to go to the bathroom, the waiter told me to sit down, he would call me once the bathroom was availible. Which he did! A rare event in other part of the world.
 
 After dinner a small group was lost in Tokyo, me and two other guys, some mixup about what to do next, and we stopped somewhere for some drinks and those drinks became a epic Five Bar Night!
-
+We ran out through the gates of the subway station and jumped into the first availible bar. One lone japanese buisnessman and two girls at his side. We thought we could drink some sake there, but the matrodine told us that it cost 5000 yen just to sit down at that bar, and when three women emerged from the back, we excussed ourselfs and ran to the next bar. Alot of bar-wranglers, Chineses girls, that told us that we could for the low cost of 3000 yen drink with them... We were more interested in Sake, beer and adventure than those girls.
 
 The five bar night! (Shinbashi)
 
 	a) Almost empty bar, with fresh vegitables, sake
+	This bar was on the second floor on the same side of the street as the girly-bar. There was just a few guests at that place, we were not that drunk, so we mostly discussed the course and ordered a hot sake. There were complementary fresh vegitables and a dip sauce. Very nice! That place had one of those space toilets, so the group all went to the bathroom, SEPERATLY. That toilet had a interesting feature after flushing, the water that filled the next flush, poured so that you could wash your hands in that... Environment friendly space toilet!
 	b) Not sitting with the Japanese, sake
+	The next place was more of a restaurant, we were placed not in the vicinity of the other guests. We drank a hot sake, and watched the scenary, one japanese guest was crazy drunk, and that group when we left was a little embarreced. There wasn't that many people in that restaurant so we left and tried another place.
 	c) Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 	Discussions with the local patrons, those two japanese who worked at the event-place, fixing conferences and exibitions, wonder what they were doing there at that late time? We ate a plate of Serano ham carved at the bar. This was a whisky place so no Sake, we drank a beer and then we stopped bothering those two patrons and the two bartenders.
