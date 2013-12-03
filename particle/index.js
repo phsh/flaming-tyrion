@@ -60,12 +60,12 @@
 		particleSeed.yStart = y;
 	}
 
-	function generateRandomColor(particleSeed){
+	function setRandomColor(particleSeed){
 		particleSeed.color = get_random_color();
 	}
 
 	function seedMiddleOfBottomline(particleSeed){
-		generateRandomColor(particleSeed);
+		setRandomColor(particleSeed);
 		particleSeed.xSpeed = getNewXSpeed();
 		particleSeed.ySpeed = getNewYSpeed();
 		seedFromPoint(particleSeed, ( world.gameAreaWidth / 2), world.gameAreaHeight);
@@ -83,7 +83,7 @@
 	function createParticleAsFontain(){
 		if(timeDelayCounter.getCounter() % 8 == 0){
 			if(particles.length % 5 === 0) {
-				generateRandomColor(particleSeed);
+				setRandomColor(particleSeed);
 			}
 			if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
 			addParticle(particles);
@@ -98,7 +98,7 @@
 			particleSeed.xSpeed = 0;
 			particleSeed.xStart = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * world.ballSize)) + world.ballSize;
 			if(particles.length % 5 === 0) {
-				generateRandomColor(particleSeed);
+				setRandomColor(particleSeed);
 			}
 			addParticle(particles);
 			timeDelayCounter.reset();
@@ -110,7 +110,7 @@
 		particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
 		particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );			
 		if(particles.length % 5 === 0) {
-			generateRandomColor(particleSeed);
+			setRandomColor(particleSeed);
 		}			
 		addParticle(particles);
 	}
