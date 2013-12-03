@@ -124,6 +124,7 @@ The five bar night! (Shinbashi)
 	b) Not sitting with the Japanese, sake
 	c) Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
 	d) Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
+	Discussions with the local patrons, those two japanese who worked at the event-place, fixing conferences and exibitions, wonder what they were doing there at that late time? We ate a plate of Serano ham carved at the bar. This was a whisky place so no Sake, we drank a beer and then we stopped bothering those two patrons and the two bartenders.
 	e) Icheru and Ayu, Last bar. (Facebook) beer
 
 Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
