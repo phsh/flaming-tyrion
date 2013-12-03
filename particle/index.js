@@ -171,7 +171,6 @@ function resetStateCheck(baselineCount, debugLineValue){
 	}
 
 function animationFunction(){
-	window.requestAnimationFrame(animationFunction);
 	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
 	var baselineCount = updateParticles(context);
 	timeDelayCounter.count();		
@@ -183,6 +182,8 @@ function animationFunction(){
 	resetStateCheck(baselineCount, debugLineValue);
 	checkForParticleLimit()
 	if(world.debug) debug.displayDebugLine(baselineCount,debugLineValue,context,world);
+	window.requestAnimationFrame(animationFunction);
+	
 }
 
 seedMiddleOfBottomline(particleSeed);
