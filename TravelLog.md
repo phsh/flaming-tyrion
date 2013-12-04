@@ -129,6 +129,7 @@ This bar was on the second floor on the same side of the street as the girly-bar
 The next place was more of a restaurant, we were placed not in the vicinity of the other guests. We drank a hot sake, and watched the scenary, one japanese guest was crazy drunk, and that group when we left was a little embarreced. There wasn't that many people in that restaurant so we left and tried another place.
 
 * Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
+Right away we entered we knew that we had hit the jackpot. We had found a quintessentional japanese bar with real japanese buisnessmen, who were crazy and drunk. They were all shouting at the tv, where they were showing some japanese music videos, and they sang with the songs. I had never seen or heard of those songs, but there is no try it is only a do! So into the song I went, and sang with my hearths content. The friendlyness of the people and there lack of critisium of my butchering of their classics songs, made the whole experience even better. I made a short term friends, and had a blast. We ordered some hot sake, but I was very saticfied so no more sake. And I believe that I made the correct choise as my friends continued down that path...
 
 * Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 
