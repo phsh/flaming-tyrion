@@ -131,13 +131,15 @@ The next place was more of a restaurant, we were placed not in the vicinity of t
 * Shouting at the tv with crazy japanese, sake, not soo much, was kind of saticified, more fun dancing with the people than drinking more. 
 Right away we entered we knew that we had hit the jackpot. We had found a quintessentional japanese bar with real japanese buisnessmen, who were crazy and drunk. They were all shouting at the tv, where they were showing some japanese music videos, and they sang with the songs. I had never seen or heard of those songs, but there is no try it is only a do! So into the song I went, and sang with my hearths content. The friendlyness of the people and there lack of critisium of my butchering of their classics songs, made the whole experience even better. I made a short term friends, and had a blast. We ordered some hot sake, but I was very saticfied so no more sake. And I believe that I made the correct choise as my friends continued down that path...
 
+Our cash had ran out, and we had to check all the convenient stores in that neighborhood for one that had a ATM that excepted international cards. After about an hour we finally found one. The night could continue.
+
 * Klondyke Highball: Whisky bar, beer and serano (Facebook), beer
 
 Discussions with the local patrons, those two japanese who worked at the event-place, fixing conferences and exibitions, wonder what they were doing there at that late time? We ate a plate of Serano ham carved at the bar. This was a whisky place so no Sake, we drank a beer and then we stopped bothering those two patrons and the two bartenders.
 
 * Icheru and Ayu, Last bar. (Facebook) beer
 
-Back at the hotel at a very late hour, but in time for listening to the World Cup qualifier game. Sweden was close for a few minutes, but then the game ran away from us.
+One last bar were on the schedule, apparently. We found a little place on the second floor, that were still open, and let us in. There was one bartender and his girlfriend. They started drinking with us, and we had a splendid time. I tried explaining my name to them, to the merryment of those two. "Like an apple, you know pear?" "Apple?", we dranks some beers and listened to there stories, she was a massuse and he was a bartender. I found some weird magasins in a box, that I checkout will the other talked about stuff. The time was very late and finally we were done. We found a taxi and made the trip to the Hotel returned there around 05:00. One of my travelers fell a sleep in the car. We made it to the hotel just in time for the Sweden World Qualifier Game. Sweden was close for a few minutes, but then the game ran away from us.
 
 Day four (Tired)
 ================
