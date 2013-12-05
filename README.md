@@ -13,6 +13,8 @@ run by using:
 The project was started as a play demo of how to generate the canvas html5 element. The playing with the code generated this project.
 
 #Next thing: state tranisitions using functional programming.
+#More next thing: extract the common functions to a seperate module
+
 -------------
 **Editor** is Sublime2.0.2
 
