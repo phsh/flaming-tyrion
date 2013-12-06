@@ -21,8 +21,8 @@
 
 	var canvas = document.createElement('canvas');
 
-	canvas.height=world.gameAreaHeight;
-	canvas.width=world.gameAreaWidth;
+	canvas.height=world.areaHeight;
+	canvas.width=world.areaWidth;
 	document.body.appendChild(canvas);
 
 	var context = canvas.getContext('2d');
@@ -39,12 +39,12 @@
 	}
 
 	function getBaselineValue(){
-		var debugLineValue = world.gameAreaHeight-1;
+		var debugLineValue = world.areaHeight-1;
 		if( stateMachine.getState()===1 || stateMachine.getState() === 4){
-			debugLineValue = (world.gameAreaHeight-world.ballSize-10);
+			debugLineValue = (world.areaHeight-world.ballSize-10);
 		}
 		if( stateMachine.getState() === 11){
-			debugLineValue = (world.gameAreaHeight/2);
+			debugLineValue = (world.areaHeight/2);
 		}
 		return debugLineValue;
 	}
@@ -68,7 +68,7 @@
 		setRandomColor(particleSeed);
 		particleSeed.xSpeed = getNewXSpeed();
 		particleSeed.ySpeed = getNewYSpeed();
-		seedFromPoint(particleSeed, ( world.gameAreaWidth / 2), world.gameAreaHeight);
+		seedFromPoint(particleSeed, ( world.areaWidth / 2), world.areaHeight);
 	}
 
 	function addParticle(particles){
@@ -96,7 +96,7 @@
 			particleSeed.ySpeed = 20;
 			particleSeed.y = world.ballSize;
 			particleSeed.xSpeed = 0;
-			particleSeed.x = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * world.ballSize)) + world.ballSize;
+			particleSeed.x = ((particles.length / world.particleCount) * (world.areaWidth - 2 * world.ballSize)) + world.ballSize;
 			if(particles.length % 5 === 0) {
 				setRandomColor(particleSeed);
 			}
@@ -140,7 +140,7 @@ function checkState(state){
 			createParticleAsRain();
 			break;
 		case 10:
-			seedFromPoint( particleSeed, (world.gameAreaWidth / 2), (world.gameAreaHeight / 2) );
+			seedFromPoint( particleSeed, (world.areaWidth / 2), (world.areaHeight / 2) );
 			createParticleAsCircle();
 			var doPop = true;
 			removeParticles(doPop);
@@ -171,10 +171,10 @@ function resetStateCheck(baselineCount, debugLineValue){
 	}
 
 function animationFunction(){
-	context.clearRect(0,0,world.gameAreaWidth,world.gameAreaHeight);
+	context.clearRect(0,0,world.areaWidth,world.areaHeight);
 	var baselineCount = updateParticles(context);
 	timeDelayCounter.count();		
-	var debugLineValue = world.gameAreaHeight-1;
+	var debugLineValue = world.areaHeight-1;
 	if(timeDelayCounter.getCounter() > 100){
 		debugLineValue = getBaselineValue();
 	}	

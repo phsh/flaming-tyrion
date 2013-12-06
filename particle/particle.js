@@ -9,8 +9,8 @@ function Particle( world , particleSeeder ){
 
 	this.radie = world.ballSize;
 	this.bounceIndex = world.bounceIndex;
-	this.gameAreaHeight = world.gameAreaHeight;
-	this.gameAreaWidth = world.gameAreaWidth;
+	this.areaHeight = world.areaHeight;
+	this.areaWidth = world.areaWidth;
 	this.gravity = world.gravity;
 }
 
@@ -18,10 +18,10 @@ Particle.prototype.update = function(){
 	this.x = this.x + this.xSpeed;
 	this.y = this.y + this.ySpeed;
 	this.ySpeed = this.ySpeed + this.gravity;
-	if (this.y > (this.gameAreaHeight-this.radie ) ) {
+	if (this.y > (this.areaHeight-this.radie ) ) {
 		this.ySpeed = -this.ySpeed;
 		this.ySpeed = this.bounceIndex * this.ySpeed;
-		this.y = this.gameAreaHeight - this.radie;
+		this.y = this.areaHeight - this.radie;
 	}
 	if (this.y < this.radie) {
 		if(this.ySpeed < 0) {
@@ -29,7 +29,7 @@ Particle.prototype.update = function(){
 			this.ySpeed = this.bounceIndex * this.ySpeed;
 		}
 	}
-	if (this.x > (this.gameAreaWidth-this.radie)){
+	if (this.x > (this.areaWidth-this.radie)){
 			this.xSpeed = -Math.abs(this.xSpeed);
 	}
 	

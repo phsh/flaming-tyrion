@@ -25,7 +25,7 @@ ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 	console.log("DONE");
 }
 
-ParticleUpdater.prototype.stateUpperRightCorner = function(particles,gameAreaWidth){
+ParticleUpdater.prototype.stateUpperRightCorner = function(particles,areaWidth){
 	var xSpeedNew = -12;
 	var ySpeedNew =  -45;
 	var xStartNew = 100;
@@ -40,7 +40,7 @@ ParticleUpdater.prototype.stateUpperRightCorner = function(particles,gameAreaWid
 		p.ySpeed = xSpeedNew + index_i;
 		p.xSpeed = ySpeedNew + index_i;
 		p.y = p.radie;
-		p.x = gameAreaWidth - p.radie;
+		p.x = areaWidth - p.radie;
 	}
 	console.log("DONE");
 }
