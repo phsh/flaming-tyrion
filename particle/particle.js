@@ -4,7 +4,8 @@ function Particle( world , particleSeeder ){
 	this.y = particleSeeder.yStart;
 	this.xSpeed = particleSeeder.xSpeed;
 	this.ySpeed = particleSeeder.ySpeed;
-	this.fillColor = particleSeeder.color;
+	
+	this.color = particleSeeder.color;
 
 	this.radie = world.ballSize;
 	this.bounceIndex = world.bounceIndex;
@@ -50,7 +51,7 @@ function ParticleSeeder(){
 Particle.prototype.drawCircle = function(context){
 	context.beginPath();
 	context.arc(this.x, this.y, this.radie, 0, 2 * Math.PI, false);
-	context.fillStyle = this.fillColor;
+	context.fillStyle = this.color;
 	context.fill();
 	context.lineWidth =3;
 	context.strokeStyle = '#000000';
