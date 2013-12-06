@@ -1,10 +1,10 @@
 function Particle( world , particleSeeder ){
 	
-	this.x = particleSeeder.xStart;
-	this.y = particleSeeder.yStart;
+	this.x = particleSeeder.x;
+	this.y = particleSeeder.y;
 	this.xSpeed = particleSeeder.xSpeed;
 	this.ySpeed = particleSeeder.ySpeed;
-	
+
 	this.color = particleSeeder.color;
 
 	this.radie = world.ballSize;
@@ -43,8 +43,8 @@ function ParticleSeeder(){
 	this.color = "blue";
 	this.xSpeed = 0;
 	this.ySpeed = 0;
-	this.xStart = 0;
-	this.yStart = 0;
+	this.x = 0;
+	this.y = 0;
 
 }
 

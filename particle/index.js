@@ -56,8 +56,8 @@
 	}
 
 	function seedFromPoint(particleSeed, x, y){
-		particleSeed.xStart = x; 
-		particleSeed.yStart = y;
+		particleSeed.x = x; 
+		particleSeed.y = y;
 	}
 
 	function setRandomColor(particleSeed){
@@ -94,9 +94,9 @@
 	function createParticleAsRain(){
 		if(timeDelayCounter.getCounter() % 8 == 0){
 			particleSeed.ySpeed = 20;
-			particleSeed.yStart = world.ballSize;
+			particleSeed.y = world.ballSize;
 			particleSeed.xSpeed = 0;
-			particleSeed.xStart = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * world.ballSize)) + world.ballSize;
+			particleSeed.x = ((particles.length / world.particleCount) * (world.gameAreaWidth - 2 * world.ballSize)) + world.ballSize;
 			if(particles.length % 5 === 0) {
 				setRandomColor(particleSeed);
 			}
