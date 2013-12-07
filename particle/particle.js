@@ -36,7 +36,6 @@ Particle.prototype.update = function(){
 	if (this.x < this.radie){
 		this.xSpeed = Math.abs(this.xSpeed);
 	}
-	
 }
 
 function ParticleSeeder(){
@@ -45,7 +44,6 @@ function ParticleSeeder(){
 	this.ySpeed = 0;
 	this.x = 0;
 	this.y = 0;
-
 }
 
 Particle.prototype.drawCircle = function(context){
@@ -56,8 +54,7 @@ Particle.prototype.drawCircle = function(context){
 	context.lineWidth =3;
 	context.strokeStyle = '#000000';
 	context.stroke();
-	
-}
+	}
 
 
 module.exports.ParticleSeeder = ParticleSeeder;
