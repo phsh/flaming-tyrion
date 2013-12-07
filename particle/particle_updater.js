@@ -11,18 +11,17 @@ ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 	var xStartNew = 100;
 	var yStartNew = 100;
 	for(i=0; i<particles.length; i++){
-		var index_i = i % 5;
-		if(index_i === 0) {
+		var seriesCounter = i % 5;
+		if(seriesCounter === 0) {
 			xSpeedNew = getNewXSpeed();
 			ySpeedNew = getNewYSpeed();
 		}
 		var p = particles[i];
-		p.ySpeed = xSpeedNew+index_i;
-		p.xSpeed = ySpeedNew+index_i;
+		p.ySpeed = xSpeedNew + seriesCounter;
+		p.xSpeed = ySpeedNew + seriesCounter;
 		p.y = p.radie;
 		p.x = p.radie;
 	}
-	console.log("DONE");
 }
 
 ParticleUpdater.prototype.stateUpperRightCorner = function(particles,areaWidth){
@@ -31,18 +30,17 @@ ParticleUpdater.prototype.stateUpperRightCorner = function(particles,areaWidth){
 	var xStartNew = 100;
 	var yStartNew = 100;
 	for(i=0; i<particles.length; i++){
-		var index_i = i % 5;
-		if(index_i === 0) {
+		var seriesCounter = i % 5;
+		if(seriesCounter === 0) {
 			xSpeedNew = getNewXSpeed();
 			ySpeedNew = getNewYSpeed();
 		}
 		var p = particles[i];
-		p.ySpeed = xSpeedNew + index_i;
-		p.xSpeed = ySpeedNew + index_i;
+		p.ySpeed = xSpeedNew + seriesCounter;
+		p.xSpeed = ySpeedNew + seriesCounter;
 		p.y = p.radie;
 		p.x = areaWidth - p.radie;
 	}
-	console.log("DONE");
 }
 
 ParticleUpdater.prototype.stateShiftRemove = function(particles){
