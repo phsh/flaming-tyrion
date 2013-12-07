@@ -8,8 +8,6 @@ function ParticleUpdater(){
 ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 	var xSpeedNew = -12;
 	var ySpeedNew =  -45;
-	var xStartNew = 100;
-	var yStartNew = 100;
 	for(i=0; i<particles.length; i++){
 		var seriesCounter = i % 5;
 		if(seriesCounter === 0) {
@@ -27,8 +25,6 @@ ParticleUpdater.prototype.stateUpperLeftCorner = function(particles){
 ParticleUpdater.prototype.stateUpperRightCorner = function(particles,areaWidth){
 	var xSpeedNew = -12;
 	var ySpeedNew =  -45;
-	var xStartNew = 100;
-	var yStartNew = 100;
 	for(i=0; i<particles.length; i++){
 		var seriesCounter = i % 5;
 		if(seriesCounter === 0) {
