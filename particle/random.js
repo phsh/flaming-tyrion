@@ -5,6 +5,7 @@ function random(min, max) {
 function randomInt(min, max){
 	return Math.floor( Math.random() * (max + min + 1) ) + min;
 }
+
 function get_random_color() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
@@ -21,7 +22,6 @@ function getNewYSpeed(){
 function getNewXSpeed(){
 	return random(-30,30);
 }
-
 
 module.exports.getNewXSpeed = getNewXSpeed;
 module.exports.getNewYSpeed = getNewYSpeed;
