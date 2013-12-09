@@ -39,14 +39,14 @@ function updateParticles(context){
 }
 
 function getBaselineValue(){
-	var debugLineValue = world.areaHeight-1;
+	var particlesInRestValue = world.areaHeight-1;
 	if( stateMachine.getState()===1 || stateMachine.getState() === 4){
-		debugLineValue = (world.areaHeight-world.ballSize-10);
+		particlesInRestValue = (world.areaHeight-world.ballSize-10);
 	}
 	if( stateMachine.getState() === 11){
-		debugLineValue = (world.areaHeight/2);
+		particlesInRestValue = (world.areaHeight/2);
 	}
-	return debugLineValue;
+	return particlesInRestValue;
 }
 
 function removeParticles(doPop){
@@ -174,14 +174,14 @@ function animationFunction(){
 	context.clearRect(0,0,world.areaWidth,world.areaHeight);
 	var baselineCount = updateParticles(context);
 	timeDelayCounter.count();		
-	var debugLineValue = world.areaHeight-1;
+	var particlesInRestValue = world.areaHeight-1;
 	if(timeDelayCounter.getCounter() > 100){
-		debugLineValue = getBaselineValue();
+		particlesInRestValue = getBaselineValue();
 	}	
 	checkState(stateMachine.getState());
-	resetStateCheck(baselineCount, debugLineValue);
+	resetStateCheck(baselineCount, particlesInRestValue);
 	checkForParticleLimit()
-	if(world.debug) debug.displayDebugLine(baselineCount,debugLineValue,context,world);
+	if(world.debug) debug.displayDebugLine(baselineCount,particlesInRestValue,context,world);
 	window.requestAnimationFrame(animationFunction);
 	
 }
