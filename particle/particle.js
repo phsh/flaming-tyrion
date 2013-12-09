@@ -1,3 +1,5 @@
+var get_random_color = require('./random').get_random_color;
+
 function Particle( world , particleSeeder ){
 	this.x = particleSeeder.x;
 	this.y = particleSeeder.y;
@@ -42,6 +44,9 @@ function ParticleSeeder(){
 	this.x = 0;
 	this.y = 0;
 	this.lineWidth = 3;
+}
+ParticleSeeder.prototype.randomColor = function(){
+	this.color = get_random_color();
 }
 
 Particle.prototype.drawCircle = function(context){
