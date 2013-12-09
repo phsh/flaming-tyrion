@@ -160,15 +160,15 @@ function checkState(state){
 }
 
 function resetStateCheck(baselineCount, debugLineValue){
-		if(baselineCount > particles.length * debugLineValue){
-			if(stateMachine.getState()===1){
-				stateMachine.setState(2);
-			}
-			if(stateMachine.getState()===11){
-				stateMachine.setState(8);
-			}
+	if(baselineCount > particles.length * debugLineValue){
+		if(stateMachine.getState()===1){
+			stateMachine.setState(2);
+		}
+		if(stateMachine.getState()===11){
+			stateMachine.setState(8);
 		}
 	}
+}
 
 function animationFunction(){
 	context.clearRect(0,0,world.areaWidth,world.areaHeight);
