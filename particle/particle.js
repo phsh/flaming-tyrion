@@ -4,7 +4,7 @@ function Particle( world , particleSeeder ){
 	this.y = particleSeeder.y;
 	this.xSpeed = particleSeeder.xSpeed;
 	this.ySpeed = particleSeeder.ySpeed;
-
+	this.lineWidth = particleSeeder.lineWidth;
 	this.color = particleSeeder.color;
 
 	this.radie = world.ballSize;
@@ -12,7 +12,7 @@ function Particle( world , particleSeeder ){
 	this.areaHeight = world.areaHeight;
 	this.areaWidth = world.areaWidth;
 	this.gravity = world.gravity;
-	this.lineWidth = world.lineWidth;
+	
 }
 
 Particle.prototype.update = function(){
@@ -45,6 +45,7 @@ function ParticleSeeder(){
 	this.ySpeed = 0;
 	this.x = 0;
 	this.y = 0;
+	this.lineWidth = 3;
 }
 
 Particle.prototype.drawCircle = function(context){
