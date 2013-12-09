@@ -12,6 +12,7 @@ function Particle( world , particleSeeder ){
 	this.areaHeight = world.areaHeight;
 	this.areaWidth = world.areaWidth;
 	this.gravity = world.gravity;
+	this.lineWidth = world.lineWidth;
 }
 
 Particle.prototype.update = function(){
@@ -51,7 +52,7 @@ Particle.prototype.drawCircle = function(context){
 	context.arc(this.x, this.y, this.radie, 0, 2 * Math.PI, false);
 	context.fillStyle = this.color;
 	context.fill();
-	context.lineWidth =3;
+	context.lineWidth = this.lineWidth;
 	context.strokeStyle = '#000000';
 	context.stroke();
 	}
