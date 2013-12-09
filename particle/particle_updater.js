@@ -42,10 +42,10 @@ ParticleUpdater.prototype.stateUpperRightCorner = function(particles,areaWidth){
 ParticleUpdater.prototype.stateShiftRemove = function(particles){
 	particles.shift();
 }
+
 ParticleUpdater.prototype.statePopRemove = function(particles){
 	particles.pop();
 }
-
 
 module.exports.ParticleUpdater = ParticleUpdater;
 

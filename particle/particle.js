@@ -1,18 +1,15 @@
 function Particle( world , particleSeeder ){
-	
 	this.x = particleSeeder.x;
 	this.y = particleSeeder.y;
 	this.xSpeed = particleSeeder.xSpeed;
 	this.ySpeed = particleSeeder.ySpeed;
 	this.lineWidth = particleSeeder.lineWidth;
 	this.color = particleSeeder.color;
-
 	this.radie = world.ballSize;
 	this.bounceIndex = world.bounceIndex;
 	this.areaHeight = world.areaHeight;
 	this.areaWidth = world.areaWidth;
 	this.gravity = world.gravity;
-	
 }
 
 Particle.prototype.update = function(){
@@ -33,7 +30,6 @@ Particle.prototype.update = function(){
 	if (this.x > (this.areaWidth-this.radie)){
 			this.xSpeed = -Math.abs(this.xSpeed);
 	}
-	
 	if (this.x < this.radie){
 		this.xSpeed = Math.abs(this.xSpeed);
 	}
@@ -56,8 +52,7 @@ Particle.prototype.drawCircle = function(context){
 	context.lineWidth = this.lineWidth;
 	context.strokeStyle = '#000000';
 	context.stroke();
-	}
-
+}
 
 module.exports.ParticleSeeder = ParticleSeeder;
 module.exports.Particle = Particle;
