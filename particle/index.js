@@ -94,12 +94,14 @@ function createParticleAsFontain(){
 function createParticleAsRain(){
 	if(timeDelayCounter.getCounter() % 8 == 0){
 		particleSeed.ySpeed = 20;
-		particleSeed.y = world.ballSize;
 		particleSeed.xSpeed = 0;
+		particleSeed.y = world.ballSize;
 		particleSeed.x = ((particles.length / world.particleCount) * (world.areaWidth - 2 * world.ballSize)) + world.ballSize;
+		
 		if(particles.length % 5 === 0) {
 			setRandomColor(particleSeed);
 		}
+		
 		addParticle(particles);
 		timeDelayCounter.reset();
 	}
