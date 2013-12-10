@@ -1,5 +1,5 @@
 var get_random_color = require('./random').get_random_color;
-
+var getNewXSpeed = require('./random').getNewXSpeed;
 function Particle( world , particleSeeder ){
 	this.x = particleSeeder.x;
 	this.y = particleSeeder.y;
@@ -47,6 +47,13 @@ function ParticleSeeder(){
 }
 ParticleSeeder.prototype.randomColor = function(){
 	this.color = get_random_color();
+}
+
+ParticleSeeder.prototype.newRandomXSpeed = function(){
+	this.xSpeed = getNewXSpeed();
+}
+ParticleSeeder.prototype.newXSpeed = function(xSpeed){
+	this.xSpeed = xSpeed;
 }
 
 Particle.prototype.drawCircle = function(context){

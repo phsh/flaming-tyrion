@@ -1,7 +1,7 @@
 var random = require('./random').random;
 var randomInt = require('./random').randomInt;
 
-var getNewXSpeed = require('./random').getNewXSpeed;
+//var getNewXSpeed = require('./random').getNewXSpeed;
 var getNewYSpeed = require('./random').getNewYSpeed;
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
@@ -62,7 +62,8 @@ function seedFromPoint(particleSeed, x, y){
 
 function seedMiddleOfBottomline(particleSeed){
 	particleSeed.randomColor();
-	particleSeed.xSpeed = getNewXSpeed();
+	particleSeed.newRandomXSpeed();
+	//particleSeed.xSpeed = getNewXSpeed();
 	particleSeed.ySpeed = getNewYSpeed();
 	seedFromPoint(particleSeed, ( world.areaWidth / 2), world.areaHeight);
 }
@@ -81,7 +82,7 @@ function createParticleAsFontain(){
 		if(particles.length % 5 === 0) {
 			particleSeed.randomColor();
 		}
-		if(particles.length % 20 === 0) particleSeed.xSpeed = getNewXSpeed();
+		if(particles.length % 20 === 0) particleSeed.newRandomXSpeed();
 		addParticle(particles);
 		timeDelayCounter.reset();
 	}
@@ -90,7 +91,7 @@ function createParticleAsFontain(){
 function createParticleAsRain(){
 	if(timeDelayCounter.getCounter() % 8 == 0){
 		particleSeed.ySpeed = 20;
-		particleSeed.xSpeed = 0;
+		particleSeed.newXSpeed(0);
 		particleSeed.y = world.ballSize;
 		particleSeed.x = ((particles.length / world.particleCount) * (world.areaWidth - 2 * world.ballSize)) + world.ballSize;
 		
@@ -105,7 +106,7 @@ function createParticleAsRain(){
 
 function createParticleAsCircle(){
 	var Speed = 40;
-	particleSeed.xSpeed = Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) );
+	particleSeed.newXSpeed( Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) ) );
 	particleSeed.ySpeed = Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) );			
 	if(particles.length % 5 === 0) {
 		particleSeed.randomColor();
