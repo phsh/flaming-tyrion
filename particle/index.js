@@ -1,6 +1,3 @@
-var random = require('./random').random;
-var randomInt = require('./random').randomInt;
-
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
 var TimeState = require('./timestate').TimeState;
