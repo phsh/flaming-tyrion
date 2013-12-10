@@ -1,7 +1,6 @@
 var random = require('./random').random;
 var randomInt = require('./random').randomInt;
 
-//var getNewXSpeed = require('./random').getNewXSpeed;
 var getNewYSpeed = require('./random').getNewYSpeed;
 var StateMachine = require('./statemachine').StateMachine;
 var Particle = require('./particle').Particle;
@@ -63,7 +62,6 @@ function seedFromPoint(particleSeed, x, y){
 function seedMiddleOfBottomline(particleSeed){
 	particleSeed.randomColor();
 	particleSeed.newRandomXSpeed();
-	//particleSeed.xSpeed = getNewXSpeed();
 	particleSeed.ySpeed = getNewYSpeed();
 	seedFromPoint(particleSeed, ( world.areaWidth / 2), world.areaHeight);
 }
