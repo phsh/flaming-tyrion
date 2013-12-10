@@ -1,5 +1,6 @@
 var get_random_color = require('./random').get_random_color;
 var getNewXSpeed = require('./random').getNewXSpeed;
+var getNewYSpeed = require('./random').getNewYSpeed;
 function Particle( world , particleSeeder ){
 	this.x = particleSeeder.x;
 	this.y = particleSeeder.y;
@@ -45,6 +46,7 @@ function ParticleSeeder(){
 	this.y = 0;
 	this.lineWidth = 3;
 }
+
 ParticleSeeder.prototype.randomColor = function(){
 	this.color = get_random_color();
 }
@@ -52,9 +54,19 @@ ParticleSeeder.prototype.randomColor = function(){
 ParticleSeeder.prototype.newRandomXSpeed = function(){
 	this.xSpeed = getNewXSpeed();
 }
+
 ParticleSeeder.prototype.newXSpeed = function(xSpeed){
 	this.xSpeed = xSpeed;
 }
+
+ParticleSeeder.prototype.newRandomYSpeed = function(){
+	this.ySpeed = getNewYSpeed();
+}
+
+ParticleSeeder.prototype.newYSpeed = function(ySpeed){
+	this.ySpeed = ySpeed;
+}
+
 
 Particle.prototype.drawCircle = function(context){
 	context.beginPath();
