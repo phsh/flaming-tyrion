@@ -14,15 +14,16 @@ var world = new WorldSettings();
 var particleSeed = new ParticleSeeder();
 var debug = new Debug();
 
-var canvas = document.createElement('canvas');
-
-canvas.height=world.areaHeight;
-canvas.width=world.areaWidth;
-document.body.appendChild(canvas);
-
-var context = canvas.getContext('2d');
-
+function setUpWorld(){
+	var canvas = document.createElement('canvas');
+	canvas.height=world.areaHeight;
+	canvas.width=world.areaWidth;
+	document.body.appendChild(canvas);
+	return canvas.getContext('2d')
+}
 	
+var context = setUpWorld();
+
 function updateParticles(context){
 	var baselineCount = 0;
 	for(i=0; i<particles.length; i++){
