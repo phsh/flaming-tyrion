@@ -59,15 +59,15 @@ function seedFromPoint(particleSeed, x, y){
 function seedFromIndexPoints(particleSeed,number_of_points,count){
 	var x = new Array();
 	x[0] = 100;
-	x[1] = 200;
-	x[2] = 300;
-	x[4] = 400;
+	x[1] = 100;
+	x[2] = world.areaWidth-200;
+	x[3] = world.areaWidth-200;;
 
 	var y = new Array();
 	y[0] = 100;
-	y[1] = 200;
-	y[2] = 300;
-	y[3] = 400;
+	y[1] = world.areaHeight-200;
+	y[2] = 100;
+	y[3] = world.areaHeight-200;
 	
 	particleSeed.x=x[ count % 4];
 	particleSeed.y=y[ count % 4];
@@ -119,7 +119,6 @@ function createParticleAsRain(){
 
 function createParticleAsCircle(){
 	var Speed = 40;
-	// seedFromIndexPoints(particleSeed,4,particles.length); TODO work on this.
 	particleSeed.newXSpeed( Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) ) );
 	particleSeed.newYSpeed( Speed * Math.cos( toRadians( ( particles.length / world.particleCount) * 360 ) ) );			
 	if(particles.length % 5 === 0) {
