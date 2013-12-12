@@ -58,9 +58,9 @@ function seedFromPoint(particleSeed, x, y){
 
 function seedFromIndexPoints(particleSeed,number_of_points,count){
 	var x = new Array();
-	x[0] = 100;
+	x[0] = 200;
 	x[1] = 100;
-	x[2] = world.areaWidth-200;
+	x[2] = world.areaWidth-400;
 	x[3] = world.areaWidth-200;;
 
 	var y = new Array();
@@ -117,6 +117,16 @@ function createParticleAsRain(){
 	}
 }
 
+function createParticleFromBox(){
+	seedFromIndexPoints(particleSeed,4,particles.length);
+	particleSeed.newXSpeed(0);
+	particleSeed.newYSpeed(10);
+	if(particles.length % 4 === 0) {
+		particleSeed.randomColor();
+	}
+	addParticle(particles);	
+}
+
 function createParticleAsCircle(){
 	var Speed = 40;
 	particleSeed.newXSpeed( Speed * Math.sin( toRadians( ( particles.length / world.particleCount) * 360 ) ) );
@@ -149,7 +159,8 @@ function checkState(state){
 			createParticleAsFontain();
 			break;
 		case 0:
-			createParticleAsRain();
+			//createParticleAsRain();
+			createParticleFromBox();
 			break;
 		case 10:
 			seedFromPoint( particleSeed, (world.areaWidth / 2), (world.areaHeight / 2) );
