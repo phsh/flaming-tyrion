@@ -119,7 +119,7 @@ function createParticleAsRain(){
 
 function createParticleFromBox(){
 	seedFromIndexPoints(particleSeed,4,particles.length);
-	particleSeed.newXSpeed(0);
+	particleSeed.newXSpeed(5);
 	particleSeed.newYSpeed(10);
 	if(particles.length % 4 === 0) {
 		particleSeed.randomColor();
