@@ -1,6 +1,8 @@
 BouncyBallsOfTokyo, or BBoT
 ===========
 The particle folder is the BBoT project
+The project will hold for a few weeks, while the "team" is reading up on the Nature of Code.
+And hopefully will get some more insight into the code of these kind of system.
 
 
 -----------
