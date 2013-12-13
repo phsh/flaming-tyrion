@@ -62,13 +62,11 @@ function seedFromIndexPoints(particleSeed,number_of_points,count){
 	x[1] = 100;
 	x[2] = world.areaWidth-400;
 	x[3] = world.areaWidth-200;;
-
 	var y = new Array();
 	y[0] = 100;
 	y[1] = world.areaHeight-200;
 	y[2] = 100;
 	y[3] = world.areaHeight-200;
-	
 	particleSeed.x=x[ count % 4];
 	particleSeed.y=y[ count % 4];
 
@@ -107,11 +105,9 @@ function createParticleAsRain(){
 		particleSeed.newXSpeed(0);
 		particleSeed.y = world.ballSize;
 		particleSeed.x = ((particles.length / world.particleCount) * (world.areaWidth - 2 * world.ballSize)) + world.ballSize;
-		
 		if(particles.length % 5 === 0) {
 			particleSeed.randomColor();
 		}
-
 		addParticle(particles);
 		timeDelayCounter.reset();
 	}
@@ -119,8 +115,8 @@ function createParticleAsRain(){
 
 function createParticleFromBox(){
 	seedFromIndexPoints(particleSeed,4,particles.length);
-	particleSeed.newXSpeed(5);
-	particleSeed.newYSpeed(10);
+	particleSeed.newXSpeed( particles.length % 4);
+	particleSeed.newYSpeed( ( particles.length % 4) * -5);
 	if(particles.length % 4 === 0) {
 		particleSeed.randomColor();
 	}
