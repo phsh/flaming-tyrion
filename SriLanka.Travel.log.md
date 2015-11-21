@@ -23,7 +23,13 @@ Slept a 30 minutes in the beginning of the flight.
 Landed in Duho, a huge empty airport, tried to order some basic sandwich, but the attendent thought there wasn't any time before the flight. We had to order at a café. The sandwich was okay for a airport food. We didn't know how much a Qatar money is worth, but apparently it wasn't too bad.
 
 The flight to Colombo. Ate some okay Lamb rice thingy, it was okay. Took a beer and a conjac.
+
+
+
 Added
+Started watching Jessica Jones 2 episodes, and 2 episodes of The League.
+
+
 ---------------
 
 
